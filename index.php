@@ -6,10 +6,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $source_path = __DIR__ . '/sources/';
 
-$list = Utils::getQueryParam('list');
+// Query request
+$type = Utils::getQueryParam('type');
 $repo = Utils::getQueryParam('repo');
+
 $repos = new Repositories($source_path);
 
+// Only one repo requested
 if ($repo != '') {
     $locales = $repos->getSingleRepository($repo);
     if ($locales) {
@@ -20,15 +23,11 @@ if ($repo != '') {
     }
 }
 
-if ($list == '' || $list == 'all') {
-    die(Json::output($repos->getRepositories()));
+// Only one type of repo requested
+if ($type != '') {
+    die(Json::output($repos->getTypeRepositories($type)));
 }
 
-if ($list == 'gaia') {
-    die(Json::output($repos->getGaiaRepositories()));
-}
-
-// In case of unknown request
-http_response_code(400);
-die('ERROR: unknown request.');
+// Display a list of all repositories
+die(Json::output($repos->getRepositories()));
 

@@ -14,14 +14,14 @@ class Repositories extends atoum\test
 
         $result = [
             [
-                "id" => "beta",
-                "name"  => "Beta",
-                "locales" => ['da', 'de', 'dsb', 'el']
+                'id' => 'beta',
+                'name'  => 'Beta',
+                'locales' => ['da', 'de', 'dsb', 'el']
             ],
             [
-                "id" => "gaia_1_3",
-                "name"  => "Gaia 1.3",
-                "locales" => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                'id' => 'gaia_1_3',
+                'name'  => 'Gaia 1.3',
+                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
             ],
         ];
 
@@ -30,21 +30,46 @@ class Repositories extends atoum\test
                 ->isEqualTo($result);
     }
 
-    public function testGetGaiaRepositories()
+    public function getTypeRepositoriesDP()
+    {
+        return [
+            [
+                'gaia',
+                [
+                   [
+                       'id' => 'gaia_1_3',
+                        'name'  => 'Gaia 1.3',
+                        'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                    ]
+                ]
+            ],
+            [
+                'product',
+                [
+                    [
+                        'id' => 'beta',
+                        'name'  => 'Beta',
+                        'locales' => ['da', 'de', 'dsb', 'el']
+                    ]
+                ]
+            ],
+            [
+                'foobar',
+                []
+            ]
+        ];
+    }
+
+    /**
+     * @dataProvider getTypeRepositoriesDP
+     */
+    public function testGetTypeRepositories($a, $b)
     {
         $obj = new _Repositories(TEST_FILES);
 
-        $result = [
-            [
-                "id" => "gaia_1_3",
-                "name"  => "Gaia 1.3",
-                "locales" => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
-            ],
-        ];
-
-        $this
-            ->array($obj->getGaiaRepositories())
-                ->isEqualTo($result);
+         $this
+            ->array($obj->getTypeRepositories($a))
+                ->isEqualTo($b);
     }
 
     public function testGetSingleRepository()
@@ -52,9 +77,9 @@ class Repositories extends atoum\test
         $obj = new _Repositories(TEST_FILES);
 
         $result = [
-                "id" => "gaia_1_3",
-                "name"  => "Gaia 1.3",
-                "locales" => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                'id' => 'gaia_1_3',
+                'name'  => 'Gaia 1.3',
+                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
         ];
 
         $this

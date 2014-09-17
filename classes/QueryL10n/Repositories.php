@@ -59,13 +59,14 @@ Class Repositories
      * Return list of Gaia repositories with ID, pretty name and
      * supported locales
      *
+     * @param  string        $type Type of repository
      * @return array List of supported repositories
      */
-    public function getGaiaRepositories()
+    public function getTypeRepositories($type)
     {
         $result = [];
         foreach ($this->repo_list as $repo) {
-            if (strpos($repo['id'], 'gaia') !== false) {
+            if ($repo['type'] == $type) {
                 $result[] = [
                     'id' => $repo['id'],
                     'name' => $repo['name'],
