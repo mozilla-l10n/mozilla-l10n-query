@@ -1,0 +1,50 @@
+{
+    "release": {
+        "id": "release",
+        "name": "Release",
+        "locales": "release.txt",
+        "type": "product"
+    },
+    "beta": {
+        "id": "beta",
+        "name": "Beta",
+        "locales": "beta.txt",
+        "type": "product"
+    },
+    "aurora": {
+        "id": "aurora",
+        "name": "Aurora",
+        "locales": "aurora.txt",
+        "type": "product"
+    },
+    "central": {
+        "id": "central",
+        "name": "Central",
+        "locales": "central.txt",
+        "type": "product"
+    },
+    "gaia": {
+        "id": "gaia",
+        "name": "Gaia Master",
+        "locales": "gaia.txt",
+        "type": "gaia"
+    },
+    "gaia_1_3": {
+        "id": "gaia_1_3",
+        "name": "Gaia 1.3",
+        "locales": "gaia_1_3.txt",
+        "type": "gaia"
+    },
+    "gaia_1_4": {
+        "id": "gaia_1_4",
+        "name": "Gaia 1.4",
+        "locales": "gaia_1_4.txt",
+        "type": "gaia"
+    },
+    "gaia_2_0": {
+        "id": "gaia_2_0",
+        "name": "Gaia 2.0",
+        "locales": "gaia_2_0.txt",
+        "type": "gaia"
+    }
+}

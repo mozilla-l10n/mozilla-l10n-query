@@ -1,0 +1,11 @@
+{
+    "require": {
+        "atoum/atoum" : "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "QueryL10n": "classes/"
+        }
+    }
+}
