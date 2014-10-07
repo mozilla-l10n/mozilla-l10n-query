@@ -47,6 +47,12 @@
         "locales": "gaia_2_0.txt",
         "type": "gaia"
     },
+    "gaia_2_1": {
+        "id": "gaia_2_1",
+        "name": "Gaia 2.1",
+        "locales": "gaia_2_1.txt",
+        "type": "gaia"
+    },
     "l20n_test": {
         "id": "l20n_test",
         "name": "Test l20n",
