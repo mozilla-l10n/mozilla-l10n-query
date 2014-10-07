@@ -6,6 +6,7 @@ be
 bg
 bn-BD
 bn-IN
+br
 bs
 ca
 cs
@@ -20,6 +21,7 @@ es
 et
 eu
 ff
+fi
 fr
 fy-NL
 ga-IE
@@ -51,6 +53,7 @@ or
 pa
 pl
 pt-BR
+pt-PT
 ro
 ru
 si
