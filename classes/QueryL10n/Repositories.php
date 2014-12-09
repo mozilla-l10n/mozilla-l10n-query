@@ -47,8 +47,10 @@ Class Repositories
         foreach ($this->repo_list as $repo) {
             $result[] = [
                 'id' => $repo['id'],
+                'display_order' => $repo['display_order'],
                 'name' => $repo['name'],
-                'locales' => self::getSupportedLocales($repo['id'])
+                'locales' => self::getSupportedLocales($repo['id']),
+                'type' => $repo['type']
             ];
         }
 
@@ -69,8 +71,10 @@ Class Repositories
             if ($repo['type'] == $type) {
                 $result[] = [
                     'id' => $repo['id'],
+                    'display_order' => $repo['display_order'],
                     'name' => $repo['name'],
-                    'locales' => self::getSupportedLocales($repo['id'])
+                    'locales' => self::getSupportedLocales($repo['id']),
+                    'type' => $repo['type']
                 ];
             }
         }
@@ -92,7 +96,9 @@ Class Repositories
             return [
                 'id' => $repo['id'],
                 'name' => $repo['name'],
-                'locales' => self::getSupportedLocales($repo['id'])
+                'display_order' => $repo['display_order'],
+                'locales' => self::getSupportedLocales($repo['id']),
+                'type' => $repo['type']
             ];
         }
 
