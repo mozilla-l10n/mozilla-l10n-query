@@ -3,6 +3,7 @@ ast
 cs
 de
 en-GB
+en-US
 eo
 es-AR
 es-CL
