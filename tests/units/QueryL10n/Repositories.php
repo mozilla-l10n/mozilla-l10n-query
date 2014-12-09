@@ -15,13 +15,17 @@ class Repositories extends atoum\test
         $result = [
             [
                 'id' => 'beta',
+                'display_order' => 1,
                 'name'  => 'Beta',
-                'locales' => ['da', 'de', 'dsb', 'el']
+                'locales' => ['da', 'de', 'dsb', 'el'],
+                'type' => 'product'
             ],
             [
                 'id' => 'gaia_1_3',
+                'display_order' => 2,
                 'name'  => 'Gaia 1.3',
-                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
+                'type' => 'gaia'
             ],
         ];
 
@@ -37,9 +41,11 @@ class Repositories extends atoum\test
                 'gaia',
                 [
                    [
-                       'id' => 'gaia_1_3',
+                        'id' => 'gaia_1_3',
+                        'display_order' => 2,
                         'name'  => 'Gaia 1.3',
-                        'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                        'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
+                        'type' => 'gaia'
                     ]
                 ]
             ],
@@ -48,8 +54,10 @@ class Repositories extends atoum\test
                 [
                     [
                         'id' => 'beta',
+                        'display_order' => 1,
                         'name'  => 'Beta',
-                        'locales' => ['da', 'de', 'dsb', 'el']
+                        'locales' => ['da', 'de', 'dsb', 'el'],
+                        'type' => 'product'
                     ]
                 ]
             ],
@@ -78,8 +86,10 @@ class Repositories extends atoum\test
 
         $result = [
                 'id' => 'gaia_1_3',
+                'display_order' => 2,
                 'name'  => 'Gaia 1.3',
-                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs']
+                'locales' => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
+                'type' => 'gaia'
         ];
 
         $this
