@@ -1,0 +1,22 @@
+{
+  "cf_locale": {
+    "es-ES": {
+      "description": "Spanish (Spain)",
+      "full_name": "es-ES / Spanish (Spain)"
+    },
+    "it": {
+      "description": "Italian",
+      "full_name": "it / Italian"
+    }
+  },
+  "mozilla_localizations": {
+    "es-ES": {
+      "description": "Spanish",
+      "full_name": "es-ES / Spanish"
+    },
+    "it": {
+      "description": "Italian",
+      "full_name": "it / Italian"
+    }
+  }
+}
