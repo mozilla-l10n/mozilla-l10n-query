@@ -10,36 +10,44 @@ namespace QueryL10n;
  */
 Class Repositories
 {
+    /**
+     * @var  array  $repo_list  List of supported repositories
+     */
     private $repo_list;
+
+    /**
+     * @var  string  $source_path  Path for sources
+     */
     private $source_path;
 
     /**
      * The constructor sets shared variables
      *
-     * @param string $path Path to folder with source files
+     * @param  string  $path  Path to folder with source files
      */
     public function __construct($path)
     {
         $this->source_path = $path;
-        $this->repo_list = self::getRepositoriesJson($path);
+        $this->repo_list = $this->getRepositoriesJson();
     }
 
     /**
      * Return array with data for all repositories
      *
-     * @param string $path Path to folder with source files
-     * @return array       Data repositories
+     * @return  array          Data repositories
      */
-    public function getRepositoriesJson($path)
+    public function getRepositoriesJson()
     {
-        return Json::fetch($path . 'repositories.json');
+        $json_data = new Json($this->source_path . 'repositories.json');
+
+        return $json_data->fetchContent();
     }
 
     /**
      * Return a full list of repositories with ID, pretty name and
      * supported locales
      *
-     * @return array List of supported repositories
+     * @return  array  List of supported repositories
      */
     public function getRepositories()
     {
@@ -49,7 +57,7 @@ Class Repositories
                 'id' => $repo['id'],
                 'display_order' => $repo['display_order'],
                 'name' => $repo['name'],
-                'locales' => self::getSupportedLocales($repo['id']),
+                'locales' => $this->getSupportedLocales($repo['id']),
                 'type' => $repo['type']
             ];
         }
@@ -61,8 +69,9 @@ Class Repositories
      * Return list of Gaia repositories with ID, pretty name and
      * supported locales
      *
-     * @param  string        $type Type of repository
-     * @return array List of supported repositories
+     * @param   string  $type  Type of repository
+     *
+     * @return  array          List of supported repositories
      */
     public function getTypeRepositories($type)
     {
@@ -73,7 +82,7 @@ Class Repositories
                     'id' => $repo['id'],
                     'display_order' => $repo['display_order'],
                     'name' => $repo['name'],
-                    'locales' => self::getSupportedLocales($repo['id']),
+                    'locales' => $this->getSupportedLocales($repo['id']),
                     'type' => $repo['type']
                 ];
             }
@@ -85,8 +94,10 @@ Class Repositories
     /**
      * Return data about a single repository
      *
-     * @param  string        $repo_id Repository ID
-     * @return array/boolean          Data about the requested repository, false if unknown repo
+     * @param   string  $repo_id  Repository ID
+     *
+     * @return  mixed             Data about the requested repository,
+     *                            false if unknown repo
      */
     public function getSingleRepository($repo_id)
     {
@@ -97,7 +108,7 @@ Class Repositories
                 'id' => $repo['id'],
                 'name' => $repo['name'],
                 'display_order' => $repo['display_order'],
-                'locales' => self::getSupportedLocales($repo['id']),
+                'locales' => $this->getSupportedLocales($repo['id']),
                 'type' => $repo['type']
             ];
         }
@@ -108,8 +119,8 @@ Class Repositories
     /**
      * Return a list of locales supported for a specific repo ID
      *
-     * @param  string $repo_id  Repository ID
-     * @return array            List of supported locales
+     * @param   string  $repo_id  Repository ID
+     * @return  array             List of supported locales
      */
     public function getSupportedLocales($repo_id)
     {

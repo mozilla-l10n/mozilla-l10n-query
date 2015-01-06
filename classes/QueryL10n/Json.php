@@ -4,21 +4,52 @@ namespace QueryL10n;
 /**
  * Json class
  *
- * All the methods we need to work with or generate Json data
+ * JSON functions to read a JSON file or output data in JSON/JSONP format
+ *
  *
  * @package QueryL10n
  */
 class Json
 {
     /**
-     * Transforms an array into JSON/JSONP
-     *
-     * @param array $data The data we want to convert to json
-     * @param boolean $jsonp Optional, false by default, true to generate JSONP
-     * @param boolean $pretty_print Optional. Output as readable JSON_PRETTY_PRINT
-     * @return string Json data
+     * @var  string  $jsonURI  URI of the JSON stream to read
      */
-    public static function output(array $data, $jsonp = false, $pretty_print = false)
+    private $jsonURI;
+
+    /**
+     * Build Json object and set URI (default empty)
+     *
+     * @param  string  $uri  URI of the JSON stream to read
+     */
+    public function __construct($uri = '')
+    {
+        $this->jsonURI = $uri;
+    }
+
+    /**
+     * Set JSON URI
+     *
+     * @param  string  $uri  JSON URI to read
+     *
+     * @return $this         Newly created Json object
+     */
+    public function setURI($uri)
+    {
+        $this->jsonURI = $uri;
+
+        return $this;
+    }
+
+    /**
+     * Return a JSON/JSONP representation of data
+     *
+     * @param  array  Data in JSON field
+     * @param  mixed  Can be a string (JSONP function name), or boolean.
+     *                Default value is false
+     *
+     * @return json   JSON content
+     */
+    public function outputContent(array $data, $jsonp = false, $pretty_print = false)
     {
         $json = $pretty_print ? json_encode($data, JSON_PRETTY_PRINT) : json_encode($data);
         $mime = 'application/json';
@@ -39,13 +70,12 @@ class Json
     }
 
     /**
-     * Fetch a local or remote JSON source and returns as a PHP array
+     * Return an array from a local or remote JSON file
      *
-     * @param string $uri Location of the json file, local or remote
-     * @return array Data converted to an array
+     * @return  array  Decoded JSON content
      */
-    public static function fetch($uri)
+    public function fetchContent()
     {
-        return json_decode(file_get_contents($uri), true);
+        return json_decode(file_get_contents($this->jsonURI), true);
     }
 }
