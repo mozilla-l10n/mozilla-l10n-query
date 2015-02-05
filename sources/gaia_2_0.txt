@@ -12,6 +12,7 @@ cs
 cy
 da
 de
+ee
 el
 en-GB
 en-US
@@ -38,6 +39,7 @@ km
 kn
 ko
 lij
+ln
 lt
 mai
 mk
@@ -69,6 +71,7 @@ th
 tr
 ur
 vi
+wo
 xh
 zh-CN
 zh-TW
