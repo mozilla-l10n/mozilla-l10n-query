@@ -27,12 +27,14 @@ ga-IE
 gd
 gl
 gu
+ha
 he
 hi-IN
 hr
 ht
 hu
 id
+ig
 it
 ja
 km
