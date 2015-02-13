@@ -14,7 +14,7 @@ class Bugzilla extends atoum\test
         return [
             ['', 'it', 'it / Italian'],
             ['product', 'es-ES', 'es-ES / Spanish'],
-            ['www',  'es-ES', 'es-ES / Spanish (Spain)']
+            ['www',  'es-ES', 'es-ES / Spanish (Spain)'],
         ];
     }
 
@@ -30,4 +30,3 @@ class Bugzilla extends atoum\test
                 ->isEqualTo($c);
     }
 }
-
