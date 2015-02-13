@@ -8,22 +8,22 @@ namespace QueryL10n;
  *
  * @package QueryL10n
  */
-Class Bugzilla
+class Bugzilla
 {
     /**
-     * @var  array  $component_list  List of Bugzilla l10n components
+     * @var array $component_list  List of Bugzilla l10n components
      */
     private $component_list;
 
     /**
-     * @var  string  $source_path  Path for sources
+     * @var string $source_path  Path for sources
      */
     private $source_path;
 
     /**
      * The constructor sets shared variables
      *
-     * @param  string  $path  Path to folder with source files
+     * @param string $path Path to folder with source files
      */
     public function __construct($path)
     {
@@ -34,7 +34,7 @@ Class Bugzilla
     /**
      * Return array with data for all Bugzilla l10n components
      *
-     * @return  array  Data repositories
+     * @return array Data repositories
      */
     public function getBugzillaComponentsJson()
     {
@@ -48,9 +48,9 @@ Class Bugzilla
      * For Mozilla Localization (default) we need its component names.
      * For www.mozilla.org::L10N we need values of cf_locale (locale selector).
      *
-     * @param   string  $product  Bugzilla product
+     * @param string $product Bugzilla product
      *
-     * @return  array             List of locales and their Bugzilla references
+     * @return array List of locales and their Bugzilla references
      */
     public function getBugzillaComponents($product)
     {

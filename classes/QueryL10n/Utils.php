@@ -8,7 +8,7 @@ namespace QueryL10n;
  *
  * @package QueryL10n
  */
-Class Utils
+class Utils
 {
     /*
      * Read GET parameter if set, or fallback
@@ -17,7 +17,8 @@ Class Utils
      * @param   string  $fallback  Optional fallback value
      * @return  string             Parameter value, or fallback
      */
-    public static function getQueryParam($param, $fallback = '') {
+    public static function getQueryParam($param, $fallback = '')
+    {
         if (isset($_GET[$param])) {
             return is_bool($fallback)
                    ? true
@@ -38,7 +39,7 @@ Class Utils
     {
         if (! is_array($origin)) {
             // If $origin is a string, always return a string
-            $origin  = array($origin);
+            $origin  = [$origin];
             $isarray = false;
         }
 

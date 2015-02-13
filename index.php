@@ -39,4 +39,3 @@ if ($bugzilla != '') {
 
 // Display a list of all repositories
 die($json_data->outputContent($repos->getRepositories()));
-
