@@ -1,0 +1,10 @@
+language: php
+php:
+  - 5.4
+  - 5.5
+before_script:
+  ## Composer
+  - composer install
+script:
+  - vendor/atoum/atoum/bin/atoum -d tests/units/
+  - vendor/bin/php-cs-fixer --diff --dry-run -v fix
