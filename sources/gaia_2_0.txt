@@ -75,6 +75,7 @@ ur
 vi
 wo
 xh
+yo
 zh-CN
 zh-TW
 zu
