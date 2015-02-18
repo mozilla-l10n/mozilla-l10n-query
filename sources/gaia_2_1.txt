@@ -73,6 +73,7 @@ tr
 ur
 vi
 xh
+yo
 zh-CN
 zh-TW
 zu
