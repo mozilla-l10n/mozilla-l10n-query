@@ -39,6 +39,7 @@ ja
 km
 kn
 ko
+lg
 lij
 lt
 mai
@@ -69,6 +70,7 @@ sw
 ta
 te
 th
+tn
 tr
 ur
 vi

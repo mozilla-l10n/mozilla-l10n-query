@@ -40,6 +40,7 @@ ja
 km
 kn
 ko
+lg
 lij
 ln
 lt
@@ -70,6 +71,7 @@ sw
 ta
 te
 th
+tn
 tr
 ur
 vi
