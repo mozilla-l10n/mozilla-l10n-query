@@ -8,7 +8,6 @@ require_once __DIR__ . '/../bootstrap.php';
 
 class Bugzilla extends atoum\test
 {
-
     public function getBugzillaComponentsDP()
     {
         return [
