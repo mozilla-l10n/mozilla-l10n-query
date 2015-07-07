@@ -28,12 +28,14 @@ ga-IE
 gd
 gl
 gu
+ha
 he
 hi-IN
 hr
 ht
 hu
 id
+ig
 it
 ja
 km
@@ -41,6 +43,7 @@ kn
 ko
 lg
 lij
+ln
 lt
 mai
 mk
@@ -70,6 +73,7 @@ sw
 ta
 te
 th
+tl
 tn
 tr
 ur
