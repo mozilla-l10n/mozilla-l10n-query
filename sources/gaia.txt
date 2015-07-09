@@ -1,4 +1,5 @@
 af
+am
 ar
 as
 ast
@@ -13,6 +14,7 @@ cs
 cy
 da
 de
+dsb
 el
 en-GB
 en-US
@@ -31,6 +33,7 @@ gu
 he
 hi-IN
 hr
+hsb
 hu
 id
 it
@@ -78,6 +81,7 @@ ur
 vi
 xh
 yo
+zam
 zh-CN
 zh-TW
 zu
