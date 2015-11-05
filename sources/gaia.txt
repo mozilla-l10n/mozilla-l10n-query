@@ -5,6 +5,7 @@ as
 ast
 be
 bg
+bm
 bn-BD
 bn-IN
 br
@@ -22,6 +23,7 @@ eo
 es
 et
 eu
+fa
 ff
 fi
 fr
@@ -46,6 +48,7 @@ lij
 lt
 lv
 mai
+mg
 mk
 ml
 mr
