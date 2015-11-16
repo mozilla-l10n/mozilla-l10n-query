@@ -55,16 +55,23 @@
         "locales": "gaia_2_2.txt",
         "type": "gaia"
     },
+    "gaia_2_5": {
+        "id": "gaia_2_5",
+        "display_order": 9,
+        "name": "Gaia 2.5",
+        "locales": "gaia_2_5.txt",
+        "type": "gaia"
+    },
     "gaia": {
         "id": "gaia",
-        "display_order": 9,
+        "display_order": 10,
         "name": "Gaia Master",
         "locales": "gaia.txt",
         "type": "gaia"
     },
     "mozilla_org": {
         "id": "mozilla_org",
-        "display_order": 10,
+        "display_order": 11,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
         "type": "web"
