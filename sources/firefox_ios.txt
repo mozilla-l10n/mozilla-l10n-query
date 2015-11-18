@@ -1,3 +1,5 @@
+ar
+az
 bg
 bn-IN
 br
@@ -6,6 +8,7 @@ cy
 da
 de
 dsb
+el
 en-US
 eo
 es
@@ -21,6 +24,7 @@ id
 is
 it
 ja
+kk
 km
 ko
 lo
@@ -34,6 +38,7 @@ nn-NO
 pl
 pt-BR
 pt-PT
+rm
 ro
 ru
 sk
