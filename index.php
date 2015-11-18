@@ -1,6 +1,8 @@
 <?php
 namespace QueryL10n;
 
+use Json\Json;
+
 // Autoloading of composer dependencies
 require_once __DIR__ . '/vendor/autoload.php';
 

@@ -1,6 +1,8 @@
 <?php
 namespace QueryL10n;
 
+use Json\Json;
+
 /**
  * Repositories class
  *
