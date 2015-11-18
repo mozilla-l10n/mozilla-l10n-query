@@ -127,7 +127,10 @@ class Repositories
         $locales = [];
         if (isset($this->repo_list[$repo_id])) {
             $file_name = $this->source_path . $this->repo_list[$repo_id]['locales'];
-            $locales = file($file_name, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            if (file_exists($file_name)) {
+                $locales = file($file_name, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                sort($locales);
+            }
         }
 
         return $locales;
