@@ -10,6 +10,7 @@ before_script:
 script:
   - vendor/atoum/atoum/bin/atoum -d tests/units/
   - php tests/integrity/source_integrity.php
+  - php tests/functional/test.php
   - vendor/bin/php-cs-fixer --diff --dry-run -v fix
 matrix:
   fast_finish: true
