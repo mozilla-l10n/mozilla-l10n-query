@@ -43,10 +43,10 @@ foreach ($repositories_json as $repo_data) {
 }
 
 if (! empty($errors)) {
-    echo "Detected errors during source integrity checks:\n";
+    echo chr(27) . "[41m" . 'Detected errors during source integrity checks: ' . count($errors) . chr(27) . "[0m\n";
     echo implode("\n", $errors);
     echo "\n";
     exit(1);
 } else {
-    echo "All sources seem to be OK.\n";
+    echo chr(27) . "[42m" . 'All sources look OK.' . chr(27) . "[0m\n";
 }
