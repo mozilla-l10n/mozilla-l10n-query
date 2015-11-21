@@ -15,6 +15,7 @@ class Utils
      *
      * @param   string  $param     GET parameter to check
      * @param   string  $fallback  Optional fallback value
+     *
      * @return  string             Parameter value, or fallback
      */
     public static function getQueryParam($param, $fallback = '')
@@ -33,6 +34,7 @@ class Utils
      *
      * @param   array         $origin    String to sanitize
      * @param   boolean       $isarray   If $origin must be treated as array
+     *
      * @return  string/array             Sanitized string or array
      */
     public static function secureText($origin, $isarray = true)
@@ -64,5 +66,35 @@ class Utils
         }
 
         return ($isarray == true) ? $sanitized : $sanitized[0];
+    }
+
+    /*
+     * Return text to display in console with background color
+     * (useful for tests)
+     *
+     * @param   string  $text  Message to display
+     * @param   string  $color Background color
+     *
+     * @return  string         String with ASCII codes to display colored
+     *                         background.
+     */
+    public static function colorizeOutput($text, $color)
+    {
+        switch ($color) {
+            case 'green':
+                // White on green
+                $output = "\033[1;37m\033[42m{$text}";
+                break;
+            case 'red':
+                // White on red
+                $output = "\033[1;37m\033[41m{$text}";
+                break;
+            default:
+                $output = $text;
+                break;
+        }
+        $output .=  "\033[0m\n";
+
+        return $output;
     }
 }

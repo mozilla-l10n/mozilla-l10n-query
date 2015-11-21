@@ -1,4 +1,5 @@
 <?php
+namespace QueryL10n;
 
 use Json\Json;
 
@@ -125,10 +126,10 @@ exec('kill -9 ' . $pid);
 
 // Display results
 if ($failures) {
-    echo chr(27) . "[41m" . 'There are functional test failures: ' . count($failures) . chr(27) . "[0m\n";
+    echo Utils::colorizeOutput('Functional test: FAILURES (' . count($failures) . ')', 'red');
     echo implode("\n", $failures);
     echo "\n";
     exit(1);
 } else {
-    echo chr(27) . "[42m" . 'All functional tests PASSED.' . chr(27) . "[0m\n";
+    echo Utils::colorizeOutput('Functional tests: PASSED.', 'green');
 }
