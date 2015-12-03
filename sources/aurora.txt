@@ -36,6 +36,7 @@ fy-NL
 ga-IE
 gd
 gl
+gn
 gu-IN
 he
 hi-IN
@@ -56,6 +57,7 @@ ko
 kok
 ks
 lij
+lo
 lt
 lv
 mai
