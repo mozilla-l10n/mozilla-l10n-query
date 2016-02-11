@@ -28,3 +28,6 @@ Display list of Bugzilla's l10n component names, used to create queries and link
 
 Default is to display component names for the ```Mozilla Localizations```product.
 If XXX is set to ```www``` display values of the *Locale* select (```cf_locale``` field) used for example in www.mozilla.org::L10N
+
+# License
+This software is released under the terms of the [Mozilla Public License v2.0](http://www.mozilla.org/MPL/2.0/).
