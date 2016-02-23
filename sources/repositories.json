@@ -54,12 +54,5 @@
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
         "type": "web"
-    },
-    "l20n_test": {
-        "id": "l20n_test",
-        "display_order": 0,
-        "name": "Test l20n",
-        "locales": "l20n_test.txt",
-        "type": "test"
     }
 }
