@@ -23,7 +23,6 @@ dsb
 ee
 el
 en-GB
-en-ZA
 eo
 es-AR
 es-CL

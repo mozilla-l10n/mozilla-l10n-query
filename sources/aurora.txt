@@ -13,6 +13,7 @@ br
 brx
 bs
 ca
+cak
 cs
 cy
 da
@@ -59,7 +60,6 @@ ks
 lij
 lo
 lt
-ltg
 lv
 mai
 mk
@@ -91,10 +91,12 @@ ta
 te
 th
 tr
+tsz
 uk
 ur
 uz
 vi
+wo
 xh
 zh-CN
 zh-TW
