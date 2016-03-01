@@ -10,10 +10,11 @@ bg
 bn-BD
 bn-IN
 br
+brx
 bs
 ca
+cak
 cs
-csb
 cy
 da
 de
@@ -36,6 +37,7 @@ fy-NL
 ga-IE
 gd
 gl
+gn
 gu-IN
 he
 hi-IN
@@ -53,7 +55,10 @@ kk
 km
 kn
 ko
+kok
+ks
 lij
+lo
 lt
 lv
 mai
@@ -65,7 +70,6 @@ my
 nb-NO
 nl
 nn-NO
-oc
 or
 pa-IN
 pl
@@ -74,6 +78,7 @@ pt-PT
 rm
 ro
 ru
+sat
 si
 sk
 sl
@@ -85,9 +90,12 @@ ta
 te
 th
 tr
+tsz
 uk
+ur
 uz
 vi
+wo
 xh
 zh-CN
 zh-TW
