@@ -60,6 +60,7 @@ ks
 lij
 lo
 lt
+ltg
 lv
 mai
 mk
