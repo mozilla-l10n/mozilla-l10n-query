@@ -4,14 +4,28 @@ php:
   - 5.5
   - 5.6
   - 7.0
-before_script:
-  ## Composer
+before_install:
+  ## Disable xdebug
+  - phpenv config-rm xdebug.ini
+  ## Update Composer
   - composer self-update
+install:
+  ## Install Composer dependencies
   - composer install --no-interaction --prefer-source
 script:
   - vendor/atoum/atoum/bin/atoum -d tests/units/
   - php tests/integrity/source_integrity.php
   - php tests/functional/test.php
   - vendor/bin/php-cs-fixer --diff --dry-run -v fix
+notifications:
+  irc:
+    channels:
+      - "irc.mozilla.org#l10n-tools"
+    on_success: always
+    on_failure: always
+    use_notice: true
+    template:
+      - "%{repository} ; %{commit} (%{author}) : %{message} "
+      - "Build details: %{build_url} ; changes: %{compare_url}"
 matrix:
   fast_finish: true

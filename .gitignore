@@ -1,4 +1,5 @@
-sources/bugzilla_components.json
-composer.phar
+app/config/config.ini
+app/sources/bugzilla_components.json
 composer.lock
+composer.phar
 vendor

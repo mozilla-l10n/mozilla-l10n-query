@@ -4,13 +4,14 @@ namespace QueryL10n;
 use Json\Json;
 
 // Autoloading of composer dependencies
-require_once __DIR__ . '/vendor/autoload.php';
+$root_folder = realpath(__DIR__ . '/..');
+require_once "{$root_folder}/vendor/autoload.php";
 
 // Override sources for functional tests both locally and on Travis
 if (getenv('TRAVIS') || getenv('AUTOMATED_TESTS')) {
-    $source_path = __DIR__ . '/tests/testfiles/';
+    $source_path = "{$root_folder}/tests/testfiles/";
 } else {
-    $source_path = __DIR__ . '/sources/';
+    $source_path = "{$root_folder}/app/sources/";
 }
 
 // Query request
