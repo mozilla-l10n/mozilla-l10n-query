@@ -1,5 +1,7 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
+
+$root_folder = realpath(__DIR__ . '/../..');
+require "{$root_folder}/vendor/autoload.php";
 
 // Path to test files
-define('TEST_FILES', __DIR__ . '/../testfiles/');
+define('TEST_FILES', "{$root_folder}/tests/testfiles/");

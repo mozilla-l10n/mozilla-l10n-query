@@ -2,9 +2,10 @@
 namespace QueryL10n;
 
 // Autoloading of composer dependencies
-require_once __DIR__ . '/../../vendor/autoload.php';
+$root_folder = realpath(__DIR__ . '/../..');
+require_once "{$root_folder}/vendor/autoload.php";
 
-$source_path = __DIR__ . '/../../sources/';
+$source_path = "{$root_folder}/app/sources/";
 
 $repos = new Repositories($source_path);
 $available_repositories = $repos->getRepositories();
