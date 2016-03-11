@@ -1,5 +1,7 @@
+.composer_cache
 app/config/config.ini
 app/sources/bugzilla_components.json
 composer.lock
 composer.phar
 vendor
+web/github_log.txt
