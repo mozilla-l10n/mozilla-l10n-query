@@ -3,6 +3,7 @@ az
 bg
 bn-IN
 br
+bs
 cs
 cy
 da
@@ -27,6 +28,7 @@ it
 ja
 kk
 km
+kn
 ko
 lo
 lt
@@ -35,6 +37,7 @@ ml
 ms
 my
 nb-NO
+ne-NP
 nl
 nn-NO
 or
@@ -50,6 +53,7 @@ son
 sv-SE
 th
 tl
+tn
 tr
 uk
 uz
