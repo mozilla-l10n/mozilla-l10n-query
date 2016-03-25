@@ -1,6 +1,7 @@
 ar
 az
 bg
+bn-BD
 bn-IN
 br
 bs
@@ -47,9 +48,9 @@ pt-PT
 rm
 ro
 ru
+ses
 sk
 sl
-son
 sv-SE
 th
 tl
