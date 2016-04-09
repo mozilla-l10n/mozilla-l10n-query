@@ -45,6 +45,7 @@ he
 hi-IN
 hr
 hsb
+hto
 hu
 hy-AM
 id
@@ -79,9 +80,11 @@ nn-NO
 oc
 or
 pa-IN
+pbb
 pl
 pt-BR
 pt-PT
+qvi
 rm
 ro
 ru
@@ -100,6 +103,7 @@ th
 tl
 tn
 tr
+trs
 tsz
 uk
 ur
