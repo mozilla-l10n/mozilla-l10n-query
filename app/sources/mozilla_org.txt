@@ -104,7 +104,6 @@ tl
 tn
 tr
 trs
-tsz
 uk
 ur
 uz

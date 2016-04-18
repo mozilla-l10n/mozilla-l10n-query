@@ -60,6 +60,7 @@ ks
 lij
 lo
 lt
+ltg
 lv
 mai
 mk
@@ -68,6 +69,7 @@ mr
 ms
 my
 nb-NO
+ne-NP
 nl
 nn-NO
 or
