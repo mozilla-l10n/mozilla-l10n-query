@@ -47,7 +47,7 @@ def main():
         },
         'mozilla.org' : {
             'sources': [
-                'https://l10n.mozilla-community.org/~pascalc/langchecker/?action=listlocales&website=0&json',
+                'https://l10n.mozilla-community.org/langchecker/?action=listlocales&website=0&json',
             ],
             'filename': 'mozilla_org.txt',
             'format': 'json',
