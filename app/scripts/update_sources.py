@@ -40,7 +40,7 @@ def main():
         },
         'ios' : {
             'sources': [
-                'https://l10n.mozilla-community.org/~flod/webstatus/api/?product=firefox-ios&txt',
+                'https://l10n.mozilla-community.org/webstatus/api/?product=firefox-ios&txt',
             ],
             'filename': 'firefox_ios.txt',
             'format': 'txt',
