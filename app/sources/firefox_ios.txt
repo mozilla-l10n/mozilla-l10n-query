@@ -48,6 +48,7 @@ rm
 ro
 ru
 ses
+si
 sk
 sl
 sv-SE
