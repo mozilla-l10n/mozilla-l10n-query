@@ -34,23 +34,9 @@
         "locales": "firefox_ios.txt",
         "type": "product"
     },
-    "gaia_2_5": {
-        "id": "gaia_2_5",
-        "display_order": 6,
-        "name": "Gaia 2.5",
-        "locales": "gaia_2_5.txt",
-        "type": "gaia"
-    },
-    "gaia": {
-        "id": "gaia",
-        "display_order": 7,
-        "name": "Gaia Master",
-        "locales": "gaia.txt",
-        "type": "gaia"
-    },
     "mozilla_org": {
         "id": "mozilla_org",
-        "display_order": 8,
+        "display_order": 6,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
         "type": "web"

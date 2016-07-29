@@ -49,23 +49,6 @@ if (! isset($response[0])) {
     }
 }
 
-// /?type=gaia
-$url = $base_url . '?type=gaia';
-$headers = get_headers($url, 1);
-if (strpos($headers[0], '200 OK') === false) {
-    $failures[] = "HTTP status for /?type=gaia is: {$headers[0]}. Expected: 200.";
-}
-$response = $json_data
-    ->setURI($url)
-    ->fetchContent();
-$tmp_element = array_pop($response);
-if ($tmp_element['id'] !== 'gaia_1_3') {
-    $failures[] = "Last product for /?type=gaia is not 'gaia_1_3'.";
-}
-if (! in_array('ca', $tmp_element['locales'])) {
-    $failures[] = "'ca' is missing from product 'gaia_1_3'.";
-}
-
 // /?repo=unknown
 $url = $base_url . '?repo=unknown';
 $headers = get_headers($url, 1);

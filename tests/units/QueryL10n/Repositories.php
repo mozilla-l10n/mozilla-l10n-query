@@ -20,13 +20,6 @@ class Repositories extends atoum\test
                 'locales'       => ['da', 'de', 'dsb', 'el'],
                 'type'          => 'product',
             ],
-            [
-                'id'            => 'gaia_1_3',
-                'display_order' => 2,
-                'name'          => 'Gaia 1.3',
-                'locales'       => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
-                'type'          => 'gaia',
-            ],
         ];
 
         $this
@@ -37,18 +30,6 @@ class Repositories extends atoum\test
     public function getTypeRepositoriesDP()
     {
         return [
-            [
-                'gaia',
-                [
-                   [
-                        'id'            => 'gaia_1_3',
-                        'display_order' => 2,
-                        'name'          => 'Gaia 1.3',
-                        'locales'       => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
-                        'type'          => 'gaia',
-                    ],
-                ],
-            ],
             [
                 'product',
                 [
@@ -85,15 +66,15 @@ class Repositories extends atoum\test
         $obj = new _Repositories(TEST_FILES);
 
         $result = [
-                'id'            => 'gaia_1_3',
-                'display_order' => 2,
-                'name'          => 'Gaia 1.3',
-                'locales'       => ['ar', 'bg', 'bn-BD', 'ca', 'cs'],
-                'type'          => 'gaia',
+                'id'            => 'beta',
+                'display_order' => 1,
+                'name'          => 'Beta',
+                'locales'       => ['da', 'de', 'dsb', 'el'],
+                'type'          => 'product',
         ];
 
         $this
-            ->array($obj->getSingleRepository('gaia_1_3'))
+            ->array($obj->getSingleRepository('beta'))
                 ->isEqualTo($result);
 
         // Non existing repository
@@ -105,7 +86,6 @@ class Repositories extends atoum\test
     public function getSupportedLocalesDP()
     {
         return [
-            ['gaia_1_3', ['ar', 'bg', 'bn-BD', 'ca', 'cs']],
             ['beta', ['da', 'de', 'dsb', 'el']],
             ['foobar', []],
         ];

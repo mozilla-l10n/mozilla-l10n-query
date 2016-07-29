@@ -68,7 +68,7 @@ class Repositories
     }
 
     /**
-     * Return list of Gaia repositories with ID, pretty name and
+     * Return list of supported repositories with ID, pretty name and
      * supported locales
      *
      * @param string $type Type of repository
