@@ -13,6 +13,7 @@ da
 de
 dsb
 el
+en-GB
 eo
 es
 es-MX
@@ -23,6 +24,7 @@ ga-IE
 gd
 gl
 hsb
+hu
 id
 is
 it
