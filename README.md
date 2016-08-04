@@ -1,7 +1,7 @@
 mozilla-l10n-query
 ==================
 
-Web service to provide data like supported locales for a product or Gaia version, supported Gaia versions, etc.
+Web service to provide data like supported locales for a product, Bugzilla component names, and more.
 
 ## Installation
 Install [Composer](https://getcomposer.org/) and its dependencies.
