@@ -91,6 +91,7 @@ sv-SE
 ta
 te
 th
+tl
 tr
 tsz
 uk
