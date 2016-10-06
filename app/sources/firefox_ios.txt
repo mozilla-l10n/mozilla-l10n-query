@@ -16,6 +16,7 @@ el
 en-GB
 eo
 es
+es-CL
 es-MX
 fa
 fr
