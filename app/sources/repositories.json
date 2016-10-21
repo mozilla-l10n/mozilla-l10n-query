@@ -1,37 +1,50 @@
 {
     "release": {
         "id": "release",
-        "display_order": 1,
+        "display_order": 0,
         "name": "Release",
         "locales": "release.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
     },
     "beta": {
         "id": "beta",
-        "display_order": 2,
+        "display_order": 0,
         "name": "Beta",
         "locales": "beta.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
     },
     "central": {
         "id": "central",
-        "display_order": 3,
+        "display_order": 0,
         "name": "Central",
         "locales": "central.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
+    },
+    "cross": {
+        "id": "cross",
+        "display_order": 1,
+        "name": "Gecko products",
+        "locales": "cross.txt",
+        "type": "product",
+        "enabled": true
     },
     "firefox_ios": {
         "id": "firefox_ios",
-        "display_order": 4,
+        "display_order": 2,
         "name": "Firefox for iOS",
         "locales": "firefox_ios.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": true
     },
     "mozilla_org": {
         "id": "mozilla_org",
-        "display_order": 5,
+        "display_order": 3,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
-        "type": "web"
+        "type": "web",
+        "enabled": true
     }
 }

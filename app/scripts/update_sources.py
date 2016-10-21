@@ -14,6 +14,7 @@ def main():
             ],
             'filename': 'central.txt',
             'format': 'txt',
+            'cross': True,
         },
         'beta' : {
             'sources': [
@@ -22,6 +23,7 @@ def main():
             ],
             'filename': 'beta.txt',
             'format': 'txt',
+            'cross': True,
         },
         'release' : {
             'sources': [
@@ -30,6 +32,7 @@ def main():
             ],
             'filename': 'release.txt',
             'format': 'txt',
+            'cross': True,
         },
         'ios' : {
             'sources': [
@@ -37,6 +40,7 @@ def main():
             ],
             'filename': 'firefox_ios.txt',
             'format': 'txt',
+            'cross': False,
         },
         'mozilla.org' : {
             'sources': [
@@ -44,6 +48,7 @@ def main():
             ],
             'filename': 'mozilla_org.txt',
             'format': 'json',
+            'cross': False,
         },
     }
 
@@ -53,6 +58,10 @@ def main():
                         os.pardir,
                         'sources')
                     )
+
+    # Cross channel is a special repository including all locales shipping
+    # across all the branches. It also includes en-US
+    cross_locales = []
 
     for id, update_source in update_sources.iteritems():
         supported_locales = []
@@ -70,6 +79,8 @@ def main():
                         supported_locales.append(locale + '\n')
         # Sort locales
         supported_locales.sort()
+        if update_source['cross']:
+            cross_locales += supported_locales
 
         # Write back txt file
         print 'Writing file', update_source['filename']
@@ -77,6 +88,16 @@ def main():
         for locale in supported_locales:
             output_file.write(locale)
         output_file.close()
+
+    # Output cross locales
+    cross_locales = list(set(cross_locales))
+    cross_locales.append('en-US\n')
+    cross_locales.sort()
+    print 'Writing file cross.txt'
+    output_file = open(os.path.join(sources_folder, 'cross.txt'), 'w')
+    for locale in cross_locales:
+        output_file.write(locale)
+    output_file.close()
 
 if __name__ == '__main__':
     main()
