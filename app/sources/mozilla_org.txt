@@ -69,6 +69,7 @@ nb-NO
 ne-NP
 nl
 nn-NO
+nv
 oc
 or
 pa-IN
