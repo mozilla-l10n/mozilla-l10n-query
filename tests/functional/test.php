@@ -104,6 +104,39 @@ if ($response['es-ES'] !== 'es-ES / Spanish') {
     $failures[] = "Description for es-ES in /?bugzilla=product is wrong.\nExpected: es-ES / Spanish\nReceived: {$response['es-ES']}\n";
 }
 
+// /?tool=pontoon
+$url = $base_url . '?tool=pontoon';
+$headers = get_headers($url, 1);
+if (strpos($headers[0], '200 OK') === false) {
+    $failures[] = "HTTP status for /?bugzilla=product is: {$headers[0]}. Expected: 200.";
+}
+$response = $json_data
+    ->setURI($url)
+    ->fetchContent();
+if (! in_array('ast', $response)) {
+    $failures[] = "'ast' is missing from response for /?tool=pontoon";
+}
+
+// /?tool=all
+$url = $base_url . '?tool=all';
+$headers = get_headers($url, 1);
+if (strpos($headers[0], '200 OK') === false) {
+    $failures[] = "HTTP status for /?bugzilla=all is: {$headers[0]}. Expected: 200.";
+}
+$response = $json_data
+    ->setURI($url)
+    ->fetchContent();
+if (! isset($response['pontoon'])) {
+    $failures[] = "'pontoon' is missing from response for /?tool=all";
+}
+
+$response = $json_data
+    ->setURI($url)
+    ->fetchContent();
+if (! in_array('ast', $response['pontoon'])) {
+    $failures[] = "'bg' is missing from 'pontoon' in response for /?tool=all";
+}
+
 // Kill PHP dev server we launched in the background
 exec('kill -9 ' . $pid);
 

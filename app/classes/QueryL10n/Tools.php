@@ -28,19 +28,40 @@ class Tools
     /**
      * Return a list of locales supported for a specific tool
      *
-     * @param  string $tool Tool ID
+     * @param  string $requested_tool Tool ID
      * @return array  List of supported locales
      */
-    public function getLocales($tool)
+    public function getLocales($requested_tool)
     {
         $locales = [];
         $supported_tools = ['locamotion', 'pontoon'];
-        if (in_array($tool, $supported_tools)) {
-            $file_name = $this->source_path . $tool . '.txt';
-            if (file_exists($file_name)) {
-                $locales = file($file_name, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                sort($locales);
+
+        if ($requested_tool == 'all') {
+            foreach ($supported_tools as $tool) {
+                $locales[$tool] = self::readConfigTxt($tool);
             }
+        } else {
+            if (in_array($requested_tool, $supported_tools)) {
+                $locales = self::readConfigTxt($requested_tool);
+            }
+        }
+
+        return $locales;
+    }
+
+    /**
+     * Read a list of locales supported for a specific tool from a .txt file
+     *
+     * @param  string $tool Tool ID
+     * @return array  List of supported locales
+     */
+    public function readConfigTxt($tool)
+    {
+        $locales = [];
+        $file_name = $this->source_path . 'tools/' . $tool . '.txt';
+        if (file_exists($file_name)) {
+            $locales = file($file_name, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            sort($locales);
         }
 
         return $locales;
