@@ -18,5 +18,12 @@ class Tools extends atoum\test
         $this
             ->array($obj->getLocales('pontoon'))
                 ->isEqualTo(['ast', 'bg', 'bn-IN']);
+
+        $this
+            ->array($obj->getLocales('all'))
+                ->isEqualTo([
+                        'locamotion' => [],
+                        'pontoon'    => ['ast', 'bg', 'bn-IN'],
+                    ]);
     }
 }
