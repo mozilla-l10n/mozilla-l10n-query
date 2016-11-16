@@ -18,6 +18,7 @@ if (getenv('TRAVIS') || getenv('AUTOMATED_TESTS')) {
 $type = Utils::getQueryParam('type');
 $repo = Utils::getQueryParam('repo');
 $bugzilla = Utils::getQueryParam('bugzilla');
+$tool = Utils::getQueryParam('tool');
 
 $repos = new Repositories($source_path);
 
@@ -45,5 +46,10 @@ if ($bugzilla != '') {
     die($json_data->outputContent($bugzilla_query->getBugzillaComponents($bugzilla)));
 }
 
+// Locales working in tools
+if ($tool != '') {
+    $tools_query = new Tools($source_path);
+    die($json_data->outputContent($tools_query->getLocales($tool)));
+}
 // Display a list of all repositories
 die($json_data->outputContent($repos->getRepositories()));
