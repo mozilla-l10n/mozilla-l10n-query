@@ -1,4 +1,5 @@
 ast
+az
 bg
 bn-IN
 cs

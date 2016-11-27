@@ -10,7 +10,6 @@ ar
 arn
 as
 aym
-az
 bcl
 bho
 bm
