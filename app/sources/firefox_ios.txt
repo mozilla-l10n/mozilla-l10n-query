@@ -26,6 +26,8 @@ fy-NL
 ga-IE
 gd
 gl
+he
+hi-IN
 hsb
 hu
 id
