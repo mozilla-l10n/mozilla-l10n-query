@@ -61,6 +61,7 @@ ses
 si
 sk
 sl
+sq
 sv-SE
 te
 th
