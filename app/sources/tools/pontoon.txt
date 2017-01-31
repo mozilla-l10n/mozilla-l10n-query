@@ -31,10 +31,13 @@ rm
 si
 sk
 sl
+sq
 sr
+sv-SE
 te
 th
 tl
+tr
 uk
 wo
 zh-CN
