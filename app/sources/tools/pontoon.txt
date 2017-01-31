@@ -11,6 +11,7 @@ es-CL
 es-MX
 et
 fi
+fr
 fy-NL
 gl
 he
