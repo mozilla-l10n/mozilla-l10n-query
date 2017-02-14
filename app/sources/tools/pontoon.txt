@@ -28,6 +28,7 @@ my
 pa-IN
 pt-BR
 rm
+ru
 si
 sk
 sl
