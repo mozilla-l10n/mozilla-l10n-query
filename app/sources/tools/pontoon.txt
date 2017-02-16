@@ -1,5 +1,6 @@
 ast
 az
+be
 bg
 bn-IN
 cs
@@ -25,6 +26,7 @@ lv
 mk
 ms
 my
+nn-NO
 pa-IN
 pt-BR
 rm

@@ -98,6 +98,7 @@ min
 miq
 mis
 mit
+mix
 ml
 mn
 mni
@@ -113,7 +114,6 @@ ncj
 nd
 ne
 neb
-nn-NO
 noa
 nqo
 nso
