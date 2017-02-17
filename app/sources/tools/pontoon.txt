@@ -15,6 +15,7 @@ fi
 fr
 fy-NL
 gl
+gu-IN
 he
 id
 ka

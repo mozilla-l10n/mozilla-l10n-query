@@ -48,7 +48,6 @@ gd
 gn-BO
 gn-PY
 got
-gu
 gv
 ha
 haw
