@@ -27,6 +27,7 @@ lv
 mk
 ms
 my
+nb-NO
 nn-NO
 pa-IN
 pt-BR

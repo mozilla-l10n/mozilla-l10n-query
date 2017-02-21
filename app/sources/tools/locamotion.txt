@@ -107,7 +107,6 @@ mr
 mxq
 mxt
 nah
-nb-NO
 nch
 ncj
 nd
