@@ -90,6 +90,7 @@ te
 th
 tl
 tr
+trs
 tsz
 uk
 ur
