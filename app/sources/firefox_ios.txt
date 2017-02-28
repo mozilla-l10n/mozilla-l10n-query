@@ -3,8 +3,7 @@ ar
 ast
 az
 bg
-bn-BD
-bn-IN
+bn
 br
 bs
 ca
