@@ -68,6 +68,7 @@ mr
 ms
 my
 nb-NO
+ncj
 ne-NP
 nl
 nn-NO
@@ -101,6 +102,7 @@ ur
 uz
 vi
 xh
+zam
 zh-CN
 zh-TW
 zu
