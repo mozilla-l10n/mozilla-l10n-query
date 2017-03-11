@@ -28,8 +28,9 @@ class Tools
     /**
      * Return a list of locales supported for a specific tool
      *
-     * @param  string $requested_tool Tool ID
-     * @return array  List of supported locales
+     * @param string $requested_tool Tool ID
+     *
+     * @return array List of supported locales
      */
     public function getLocales($requested_tool)
     {
@@ -52,8 +53,9 @@ class Tools
     /**
      * Read a list of locales supported for a specific tool from a .txt file
      *
-     * @param  string $tool Tool ID
-     * @return array  List of supported locales
+     * @param string $tool Tool ID
+     *
+     * @return array List of supported locales
      */
     public function readConfigTxt($tool)
     {

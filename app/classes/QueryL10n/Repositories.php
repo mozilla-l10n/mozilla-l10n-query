@@ -121,8 +121,9 @@ class Repositories
     /**
      * Return a list of locales supported for a specific repo ID
      *
-     * @param  string $repo_id Repository ID
-     * @return array  List of supported locales
+     * @param string $repo_id Repository ID
+     *
+     * @return array List of supported locales
      */
     public function getSupportedLocales($repo_id)
     {

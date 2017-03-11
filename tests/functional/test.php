@@ -14,7 +14,7 @@ $root_folder = realpath(__DIR__ . '/../..');
 require_once "{$root_folder}/vendor/autoload.php";
 
 // Set an environment variable so that the instance will use content from test files
-putenv("AUTOMATED_TESTS=true");
+putenv('AUTOMATED_TESTS=true');
 
 // Launch PHP dev server in the background
 chdir("{$root_folder}/web");
@@ -39,7 +39,7 @@ $response = $json_data
     ->setURI($base_url)
     ->fetchContent();
 if (! isset($response[0])) {
-    $failures[] = "Product 0 is missing.";
+    $failures[] = 'Product 0 is missing.';
 } else {
     if ($response[0]['id'] !== 'beta') {
         $failures[] = "Product 0 is not 'beta'.";

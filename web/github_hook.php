@@ -35,7 +35,7 @@ if (! file_exists($composer)) {
 if (isset($_SERVER[$header])) {
     $validation = hash_hmac(
         'sha1',
-        file_get_contents("php://input"),
+        file_get_contents('php://input'),
         $secret
     );
 
