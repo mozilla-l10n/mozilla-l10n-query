@@ -68,6 +68,7 @@ tl
 tn
 tr
 uk
+ur
 uz
 zh-CN
 zh-TW
