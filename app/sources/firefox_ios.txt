@@ -21,7 +21,6 @@ es-MX
 eu
 fa
 fr
-fy-NL
 ga-IE
 gd
 gl
