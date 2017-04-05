@@ -10,6 +10,7 @@ def main():
         'central' : {
             'sources': [
                 'http://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales',
+                'http://hg.mozilla.org/mozilla-central/raw-file/default/mobile/android/locales/all-locales',
             ],
             'filename': 'central.txt',
             'format': 'txt',

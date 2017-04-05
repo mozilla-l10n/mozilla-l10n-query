@@ -56,6 +56,7 @@ km
 kn
 ko
 lij
+lo
 lt
 ltg
 lv
@@ -89,10 +90,14 @@ te
 th
 tl
 tr
+trs
+tsz
 uk
 ur
 uz
 vi
+wo
 xh
+zam
 zh-CN
 zh-TW
