@@ -15,14 +15,6 @@ def main():
             'filename': 'central.txt',
             'format': 'txt',
         },
-        'aurora' : {
-            'sources': [
-                'http://hg.mozilla.org/releases/mozilla-aurora/raw-file/default/browser/locales/all-locales',
-                'http://hg.mozilla.org/releases/mozilla-aurora/raw-file/default/mobile/android/locales/all-locales',
-            ],
-            'filename': 'aurora.txt',
-            'format': 'txt',
-        },
         'beta' : {
             'sources': [
                 'http://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/all-locales',
