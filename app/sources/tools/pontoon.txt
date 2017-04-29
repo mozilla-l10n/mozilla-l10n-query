@@ -44,6 +44,7 @@ th
 tl
 tr
 uk
+vi
 wo
 zh-CN
 zh-TW

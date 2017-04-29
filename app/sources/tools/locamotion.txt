@@ -173,7 +173,6 @@ ug
 ur
 uz
 vec
-vi
 vmz
 wa
 xh
