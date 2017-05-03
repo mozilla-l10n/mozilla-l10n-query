@@ -28,6 +28,7 @@ he
 hi-IN
 hsb
 hu
+hy-AM
 id
 is
 it
