@@ -1,4 +1,0 @@
-[config]
-
-; Github secret key for continuous integration
-github_key=putsecretkeyhere
