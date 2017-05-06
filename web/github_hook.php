@@ -14,8 +14,8 @@ $branch = 'master';
 $header = 'HTTP_X_HUB_SIGNATURE';
 
 $config_file = $app_root . '/app/config/config.yml';
-if (!file_exists($config_file)) {
-    throw new \InvalidArgumentException(sprintf('File %s is missing. Run composer install.', $config_file));
+if ( ! file_exists($config_file)) {
+    return printf('File %s is missing. Run composer install.', $config_file);
 }
 $config = \Symfony\Component\Yaml\Yaml::parse(file_get_contents($config_file));
 $secret = $config['config']['github_key'];
