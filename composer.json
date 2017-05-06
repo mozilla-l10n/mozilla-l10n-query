@@ -7,7 +7,8 @@
     ],
 
     "require": {
-        "mozillal10n/json": "~0.1"
+        "mozillal10n/json": "~0.1",
+        "incenteev/composer-parameter-handler": "~2.0"
     },
 
     "require-dev": {
@@ -18,6 +19,23 @@
     "autoload": {
         "psr-0": {
             "QueryL10n": "app/classes/"
+        }
+    },
+
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+
+    "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/config.yml",
+            "dist-file": "app/config/config.yml.dist",
+            "parameter-key": "config"
         }
     }
 }

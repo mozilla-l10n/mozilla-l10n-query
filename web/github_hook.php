@@ -7,10 +7,18 @@ date_default_timezone_set('Europe/Paris');
 $app_root = realpath(__DIR__ . '/../');
 $composer = $app_root . '/composer.phar';
 
+require $app_root . '/vendor/autoload.php';
+
 // Git variables
 $branch = 'master';
 $header = 'HTTP_X_HUB_SIGNATURE';
-$secret = parse_ini_file($app_root . '/app/config/config.ini')['github_key'];
+
+$config_file = $app_root . '/app/config/config.yml';
+if ( ! file_exists($config_file)) {
+    return printf('File %s is missing. Run composer install.', $config_file);
+}
+$config = \Symfony\Component\Yaml\Yaml::parse(file_get_contents($config_file));
+$secret = $config['config']['github_key'];
 
 // Logging function to output content to /github_log.txt
 function logHookResult($message, $success = false)
