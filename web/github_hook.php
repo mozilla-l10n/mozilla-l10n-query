@@ -7,13 +7,13 @@ date_default_timezone_set('Europe/Paris');
 $app_root = realpath(__DIR__ . '/../');
 $composer = $app_root . '/composer.phar';
 
-require $app_root.'/vendor/autoload.php';
+require $app_root . '/vendor/autoload.php';
 
 // Git variables
 $branch = 'master';
 $header = 'HTTP_X_HUB_SIGNATURE';
 
-$config_file = $app_root.'/app/config/config.yml';
+$config_file = $app_root . '/app/config/config.yml';
 if (!file_exists($config_file)) {
     throw new \InvalidArgumentException(sprintf('File %s is missing. Run composer install.', $config_file));
 }
