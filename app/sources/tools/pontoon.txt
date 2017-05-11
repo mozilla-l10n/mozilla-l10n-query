@@ -19,6 +19,7 @@ gu-IN
 he
 id
 ka
+kab
 km
 ko
 lij
