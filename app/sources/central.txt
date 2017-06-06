@@ -91,7 +91,6 @@ th
 tl
 tr
 trs
-tsz
 uk
 ur
 uz
