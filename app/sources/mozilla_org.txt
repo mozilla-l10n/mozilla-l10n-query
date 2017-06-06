@@ -76,6 +76,7 @@ nv
 oc
 or
 pa-IN
+pai
 pbb
 pl
 pt-BR
