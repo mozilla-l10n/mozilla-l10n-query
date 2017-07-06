@@ -6,6 +6,7 @@ ar
 as
 ast
 az
+azz
 be
 bg
 bn-BD
@@ -68,7 +69,6 @@ mr
 ms
 my
 nb-NO
-ncj
 ne-NP
 nl
 nn-NO
