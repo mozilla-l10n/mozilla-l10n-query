@@ -1,4 +1,3 @@
-ach
 adh
 af
 agr
@@ -13,13 +12,9 @@ aym
 bcl
 bho
 bm
-bn-BD
 bo
 br
 brx
-bs
-ca
-cak
 cbk
 cgg
 ckb
@@ -125,7 +120,6 @@ pbb
 pms
 prs
 ps
-pt
 qno
 quy
 quz
@@ -169,12 +163,9 @@ tt-RU
 tzh
 tzo
 ug
-ur
-uz
 vec
 vmz
 wa
-xh
 xlo
 xog
 yaq

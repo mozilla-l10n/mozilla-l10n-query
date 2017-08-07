@@ -1,8 +1,13 @@
+ach
 ast
 az
 be
 bg
+bn-BD
 bn-IN
+bs
+ca
+cak
 cs
 el
 en-GB
@@ -32,6 +37,7 @@ nb-NO
 nn-NO
 pa-IN
 pt-BR
+pt-PT
 rm
 ru
 si
@@ -45,7 +51,10 @@ th
 tl
 tr
 uk
+ur
+uz
 vi
 wo
+xh
 zh-CN
 zh-TW
