@@ -20,8 +20,10 @@ fi
 fr
 fy-NL
 gl
+gn
 gu-IN
 he
+hr
 id
 ka
 kab
@@ -50,11 +52,13 @@ te
 th
 tl
 tr
+trs
 uk
 ur
 uz
 vi
 wo
 xh
+zam
 zh-CN
 zh-TW

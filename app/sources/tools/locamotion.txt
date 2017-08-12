@@ -41,14 +41,12 @@ fur
 ga-IE
 gd
 gn-BO
-gn-PY
 got
 gv
 ha
 haw
 hch
 hi-IN
-hr
 hsb
 ht
 hto
@@ -155,7 +153,6 @@ tn
 tob
 toj
 trc
-trs
 tso
 tsz
 tt
@@ -172,6 +169,5 @@ yaq
 yo
 yua
 zai
-zam
 zar
 zu
