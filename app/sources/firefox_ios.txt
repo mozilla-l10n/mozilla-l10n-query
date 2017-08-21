@@ -66,7 +66,6 @@ ta
 te
 th
 tl
-tn
 tr
 uk
 ur
