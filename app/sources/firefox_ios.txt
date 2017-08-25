@@ -16,6 +16,7 @@ el
 en-GB
 eo
 es
+es-AR
 es-CL
 es-MX
 eu
