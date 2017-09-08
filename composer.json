@@ -2,7 +2,8 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/mozilla-l10n/phpclass-json"
+            "url": "https://github.com/mozilla-l10n/phpclass-json",
+            "no-api": true
         }
     ],
 
