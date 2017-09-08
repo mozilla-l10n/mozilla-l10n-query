@@ -35,7 +35,7 @@ class Tools
     public function getLocales($requested_tool)
     {
         $locales = [];
-        $supported_tools = ['locamotion', 'pontoon'];
+        $supported_tools = ['pontoon', 'pontoon-mozorg'];
 
         if ($requested_tool == 'all') {
             foreach ($supported_tools as $tool) {

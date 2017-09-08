@@ -38,7 +38,7 @@ If XXX is set to `www` display values of the *Locale* select (`cf_locale` field)
 ```
 /?tool=XXX
 ```
-Display list of locales working in a specific tool. Available values: pontoon, locamotion, all.
+Display list of locales working in a specific tool. Available values: pontoon, pontoon-mozorg, all.
 
 `all` will return a json with the list of supported tools and, for each of them, the supported locales.
 
