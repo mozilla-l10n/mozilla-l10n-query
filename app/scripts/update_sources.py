@@ -34,11 +34,19 @@ def main():
             'format': 'txt',
             'cross': True,
         },
-        'ios' : {
+        'firefox_ios' : {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=firefox-ios&txt',
             ],
             'filename': 'firefox_ios.txt',
+            'format': 'txt',
+            'cross': False,
+        },
+        'focus_ios' : {
+            'sources': [
+                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-ios&txt',
+            ],
+            'filename': 'focus_ios.txt',
             'format': 'txt',
             'cross': False,
         },

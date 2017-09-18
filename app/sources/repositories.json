@@ -39,6 +39,14 @@
         "type": "product",
         "enabled": true
     },
+    "focus_ios": {
+        "id": "focus_ios",
+        "display_order": 3,
+        "name": "Focus for iOS",
+        "locales": "focus_ios.txt",
+        "type": "product",
+        "enabled": true
+    },
     "mozilla_org": {
         "id": "mozilla_org",
         "display_order": 3,
