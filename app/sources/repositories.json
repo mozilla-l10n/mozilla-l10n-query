@@ -23,11 +23,11 @@
         "type": "product",
         "enabled": false
     },
-    "cross": {
-        "id": "cross",
+    "gecko_strings": {
+        "id": "gecko_strings",
         "display_order": 1,
         "name": "Gecko products",
-        "locales": "cross.txt",
+        "locales": "gecko_strings.txt",
         "type": "product",
         "enabled": true
     },

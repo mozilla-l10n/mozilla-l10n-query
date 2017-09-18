@@ -14,7 +14,7 @@ def main():
             ],
             'filename': 'central.txt',
             'format': 'txt',
-            'cross': True,
+            'gecko_strings': True,
         },
         'beta' : {
             'sources': [
@@ -23,7 +23,7 @@ def main():
             ],
             'filename': 'beta.txt',
             'format': 'txt',
-            'cross': True,
+            'gecko_strings': True,
         },
         'release' : {
             'sources': [
@@ -32,7 +32,7 @@ def main():
             ],
             'filename': 'release.txt',
             'format': 'txt',
-            'cross': True,
+            'gecko_strings': True,
         },
         'firefox_ios' : {
             'sources': [
@@ -40,7 +40,7 @@ def main():
             ],
             'filename': 'firefox_ios.txt',
             'format': 'txt',
-            'cross': False,
+            'gecko_strings': False,
         },
         'focus_ios' : {
             'sources': [
@@ -48,7 +48,7 @@ def main():
             ],
             'filename': 'focus_ios.txt',
             'format': 'txt',
-            'cross': False,
+            'gecko_strings': False,
         },
         'mozilla.org' : {
             'sources': [
@@ -56,7 +56,7 @@ def main():
             ],
             'filename': 'mozilla_org.txt',
             'format': 'json',
-            'cross': False,
+            'gecko_strings': False,
         },
     }
 
@@ -67,9 +67,9 @@ def main():
                         'sources')
                     )
 
-    # Cross channel is a special repository including all locales shipping
-    # across all the branches. It also includes en-US
-    cross_locales = []
+    # Gecko-strings channel is a special repository including all locales
+    # shipping across all the branches. It also includes en-US
+    gecko_strings_locales = []
 
     for id, update_source in update_sources.iteritems():
         supported_locales = []
@@ -87,8 +87,8 @@ def main():
                         supported_locales.append(locale + '\n')
         # Sort locales
         supported_locales.sort()
-        if update_source['cross']:
-            cross_locales += supported_locales
+        if update_source['gecko_strings']:
+            gecko_strings_locales += supported_locales
 
         # Write back txt file
         print 'Writing file', update_source['filename']
@@ -97,13 +97,13 @@ def main():
             output_file.write(locale)
         output_file.close()
 
-    # Output cross locales
-    cross_locales = list(set(cross_locales))
-    cross_locales.append('en-US\n')
-    cross_locales.sort()
-    print 'Writing file cross.txt'
-    output_file = open(os.path.join(sources_folder, 'cross.txt'), 'w')
-    for locale in cross_locales:
+    # Output gecko-strings locales
+    gecko_strings_locales = list(set(gecko_strings_locales))
+    gecko_strings_locales.append('en-US\n')
+    gecko_strings_locales.sort()
+    print 'Writing file gecko_strings.txt'
+    output_file = open(os.path.join(sources_folder, 'gecko_strings.txt'), 'w')
+    for locale in gecko_strings_locales:
         output_file.write(locale)
     output_file.close()
 
