@@ -42,6 +42,14 @@ def main():
             'format': 'txt',
             'gecko_strings': False,
         },
+        'focus_android' : {
+            'sources': [
+                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-android&txt',
+            ],
+            'filename': 'focus_android.txt',
+            'format': 'txt',
+            'gecko_strings': False,
+        },
         'focus_ios' : {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=focus-ios&txt',
