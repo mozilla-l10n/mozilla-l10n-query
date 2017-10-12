@@ -19,6 +19,7 @@ es-ES
 es-MX
 eu
 fa
+fi
 fr
 fy-NL
 ga-IE
@@ -60,6 +61,7 @@ tr
 trs
 uk
 ur
+vi
 zam
 zh-CN
 zh-TW

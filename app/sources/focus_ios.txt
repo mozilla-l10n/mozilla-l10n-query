@@ -1,5 +1,6 @@
 af
 ar
+ast
 az
 bn
 br
@@ -28,6 +29,7 @@ id
 is
 it
 ja
+ka
 kab
 kk
 kn
@@ -57,5 +59,6 @@ tr
 uk
 ur
 uz
+vi
 zh-CN
 zh-TW
