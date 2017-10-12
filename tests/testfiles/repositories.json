@@ -4,6 +4,7 @@
         "display_order": 1,
         "name" : "Beta",
         "locales": "beta.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": true
     }
 }

@@ -19,6 +19,7 @@ class Repositories extends atoum\test
                 'name'          => 'Beta',
                 'locales'       => ['da', 'de', 'dsb', 'el'],
                 'type'          => 'product',
+                'enabled'       => true,
             ],
         ];
 
@@ -39,6 +40,7 @@ class Repositories extends atoum\test
                         'name'          => 'Beta',
                         'locales'       => ['da', 'de', 'dsb', 'el'],
                         'type'          => 'product',
+                        'enabled'       => true,
                     ],
                 ],
             ],
@@ -71,6 +73,7 @@ class Repositories extends atoum\test
                 'name'          => 'Beta',
                 'locales'       => ['da', 'de', 'dsb', 'el'],
                 'type'          => 'product',
+                'enabled'       => true,
         ];
 
         $this
