@@ -61,6 +61,7 @@ class Repositories
                 'name'          => $repo['name'],
                 'locales'       => $this->getSupportedLocales($repo['id']),
                 'type'          => $repo['type'],
+                'enabled'       => $repo['enabled'],
             ];
         }
 
@@ -86,6 +87,7 @@ class Repositories
                     'name'          => $repo['name'],
                     'locales'       => $this->getSupportedLocales($repo['id']),
                     'type'          => $repo['type'],
+                    'enabled'       => $repo['enabled'],
                 ];
             }
         }
@@ -112,6 +114,7 @@ class Repositories
                 'display_order' => $repo['display_order'],
                 'locales'       => $this->getSupportedLocales($repo['id']),
                 'type'          => $repo['type'],
+                'enabled'       => $repo['enabled'],
             ];
         }
 

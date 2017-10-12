@@ -14,6 +14,7 @@ def main():
             ],
             'filename': 'central.txt',
             'format': 'txt',
+            'gecko_strings': True,
         },
         'beta' : {
             'sources': [
@@ -22,6 +23,7 @@ def main():
             ],
             'filename': 'beta.txt',
             'format': 'txt',
+            'gecko_strings': True,
         },
         'release' : {
             'sources': [
@@ -30,13 +32,31 @@ def main():
             ],
             'filename': 'release.txt',
             'format': 'txt',
+            'gecko_strings': True,
         },
-        'ios' : {
+        'firefox_ios' : {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=firefox-ios&txt',
             ],
             'filename': 'firefox_ios.txt',
             'format': 'txt',
+            'gecko_strings': False,
+        },
+        'focus_android' : {
+            'sources': [
+                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-android&txt',
+            ],
+            'filename': 'focus_android.txt',
+            'format': 'txt',
+            'gecko_strings': False,
+        },
+        'focus_ios' : {
+            'sources': [
+                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-ios&txt',
+            ],
+            'filename': 'focus_ios.txt',
+            'format': 'txt',
+            'gecko_strings': False,
         },
         'mozilla.org' : {
             'sources': [
@@ -44,6 +64,7 @@ def main():
             ],
             'filename': 'mozilla_org.txt',
             'format': 'json',
+            'gecko_strings': False,
         },
     }
 
@@ -53,6 +74,10 @@ def main():
                         os.pardir,
                         'sources')
                     )
+
+    # Gecko-strings channel is a special repository including all locales
+    # shipping across all the branches. It also includes en-US
+    gecko_strings_locales = []
 
     for id, update_source in update_sources.iteritems():
         supported_locales = []
@@ -70,6 +95,8 @@ def main():
                         supported_locales.append(locale + '\n')
         # Sort locales
         supported_locales.sort()
+        if update_source['gecko_strings']:
+            gecko_strings_locales += supported_locales
 
         # Write back txt file
         print 'Writing file', update_source['filename']
@@ -77,6 +104,16 @@ def main():
         for locale in supported_locales:
             output_file.write(locale)
         output_file.close()
+
+    # Output gecko-strings locales
+    gecko_strings_locales = list(set(gecko_strings_locales))
+    gecko_strings_locales.append('en-US\n')
+    gecko_strings_locales.sort()
+    print 'Writing file gecko_strings.txt'
+    output_file = open(os.path.join(sources_folder, 'gecko_strings.txt'), 'w')
+    for locale in gecko_strings_locales:
+        output_file.write(locale)
+    output_file.close()
 
 if __name__ == '__main__':
     main()

@@ -1,37 +1,66 @@
 {
     "release": {
         "id": "release",
-        "display_order": 1,
+        "display_order": 0,
         "name": "Release",
         "locales": "release.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
     },
     "beta": {
         "id": "beta",
-        "display_order": 2,
+        "display_order": 0,
         "name": "Beta",
         "locales": "beta.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
     },
     "central": {
         "id": "central",
-        "display_order": 3,
+        "display_order": 0,
         "name": "Central",
         "locales": "central.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": false
+    },
+    "gecko_strings": {
+        "id": "gecko_strings",
+        "display_order": 1,
+        "name": "Gecko products",
+        "locales": "gecko_strings.txt",
+        "type": "product",
+        "enabled": true
     },
     "firefox_ios": {
         "id": "firefox_ios",
-        "display_order": 4,
+        "display_order": 2,
         "name": "Firefox for iOS",
         "locales": "firefox_ios.txt",
-        "type": "product"
+        "type": "product",
+        "enabled": true
+    },
+    "focus_ios": {
+        "id": "focus_ios",
+        "display_order": 3,
+        "name": "Focus for iOS",
+        "locales": "focus_ios.txt",
+        "type": "product",
+        "enabled": true
+    },
+    "focus_android": {
+        "id": "focus_android",
+        "display_order": 4,
+        "name": "Focus for Android",
+        "locales": "focus_android.txt",
+        "type": "product",
+        "enabled": true
     },
     "mozilla_org": {
         "id": "mozilla_org",
         "display_order": 5,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
-        "type": "web"
+        "type": "web",
+        "enabled": true
     }
 }
