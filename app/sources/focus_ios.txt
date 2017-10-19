@@ -18,6 +18,7 @@ es-ES
 es-MX
 eu
 fa
+fi
 fr
 ga-IE
 gd
