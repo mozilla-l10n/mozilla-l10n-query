@@ -100,33 +100,42 @@ def main():
     }
 
     query = '''
-    {
-      projects {
-        slug
-        localizations {
-          locale {
-            code
-          }
-        }
-      }
+{
+  firefox: project(slug: "firefox") {
+    ...allLocales
+  }
+  fennec: project(slug: "firefox-for-android") {
+    ...allLocales
+  }
+  mozillaorg: project(slug: "mozillaorg") {
+    ...allLocales
+  }
+}
+
+fragment allLocales on Project {
+  localizations {
+    locale {
+      code
     }
-    ''';
+  }
+}
+''';
     try:
         url = 'https://pontoon.mozilla.org/graphql?query={}'.format(urllib.quote_plus(query))
         print('Reading sources for Pontoon')
         response = urllib2.urlopen(url)
         json_data = json.load(response)
-        for project in json_data['data']['projects']:
-            if project['slug'] in ['firefox', 'firefox-for-android']:
-                for element in project['localizations']:
-                    code = element['locale']['code']
-                    if code not in pontoon_locales['pontoon']:
-                        pontoon_locales['pontoon'].append(code)
-            elif project['slug'] == 'mozillaorg':
-                for element in project['localizations']:
+        for project, project_data in json_data['data'].iteritems():
+            if project == 'mozillaorg':
+                for element in project_data['localizations']:
                     code = element['locale']['code']
                     if code not in pontoon_locales['pontoon-mozorg']:
                         pontoon_locales['pontoon-mozorg'].append(code)
+            else:
+                for element in project_data['localizations']:
+                    code = element['locale']['code']
+                    if code not in pontoon_locales['pontoon']:
+                        pontoon_locales['pontoon'].append(code)
     except Exception as e:
         print(e)
 
