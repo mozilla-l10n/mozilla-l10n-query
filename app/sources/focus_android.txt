@@ -28,6 +28,7 @@ hi-IN
 hsb
 hu
 hy-AM
+ia
 id
 it
 ja
