@@ -58,7 +58,6 @@ ko
 lij
 lo
 lt
-ltg
 lv
 mai
 mk
@@ -67,7 +66,6 @@ mr
 ms
 my
 nb-NO
-ne-NP
 nl
 nn-NO
 or
@@ -88,9 +86,7 @@ sv-SE
 ta
 te
 th
-tl
 tr
-trs
 uk
 ur
 uz

@@ -58,7 +58,6 @@ ko
 lij
 lo
 lt
-ltg
 lv
 mai
 mk
@@ -88,9 +87,7 @@ sv-SE
 ta
 te
 th
-tl
 tr
-trs
 uk
 ur
 uz

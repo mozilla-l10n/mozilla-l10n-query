@@ -22,8 +22,8 @@ def main():
     update_sources = {
         'central' : {
             'sources': [
-                'http://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales',
-                'http://hg.mozilla.org/mozilla-central/raw-file/default/mobile/android/locales/all-locales',
+                'https://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales',
+                'https://hg.mozilla.org/mozilla-central/raw-file/default/mobile/android/locales/all-locales',
             ],
             'filename': 'central',
             'format': 'txt',
@@ -31,8 +31,8 @@ def main():
         },
         'beta' : {
             'sources': [
-                'http://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/all-locales',
-                'http://hg.mozilla.org/releases/mozilla-beta/raw-file/default/mobile/android/locales/all-locales',
+                'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/shipped-locales',
+                'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/mobile/android/locales/maemo-locales',
             ],
             'filename': 'beta',
             'format': 'txt',
@@ -40,8 +40,8 @@ def main():
         },
         'release' : {
             'sources': [
-                'http://hg.mozilla.org/releases/mozilla-release/raw-file/default/browser/locales/all-locales',
-                'http://hg.mozilla.org/releases/mozilla-release/raw-file/default/mobile/android/locales/all-locales',
+                'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/browser/locales/shipped-locales',
+                'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/mobile/android/locales/maemo-locales',
             ],
             'filename': 'release',
             'format': 'txt',
@@ -151,7 +151,11 @@ fragment allLocales on Project {
             if update_source['format'] == 'txt':
                 for locale in response:
                     locale = locale.rstrip()
-                    if locale != '' and locale not in supported_locales:
+                    if 'shipped-locales' in url:
+                        # Remove platform from shipped-locales
+                        for text in ['linux', 'osx', 'win32']:
+                            locale = locale.replace(text, '').rstrip()
+                    if locale not in ['', 'en-US'] and locale not in supported_locales:
                         supported_locales.append(locale)
             else:
                 json_data = json.load(response)
