@@ -55,6 +55,7 @@ km
 kn
 ko
 ks
+lb
 lg
 lij
 lo
@@ -85,6 +86,7 @@ rm
 ro
 ru
 sc
+scn
 si
 sk
 sl

@@ -4,6 +4,7 @@ az
 bg
 bn-BD
 bn-IN
+bs
 ca
 cak
 cs
