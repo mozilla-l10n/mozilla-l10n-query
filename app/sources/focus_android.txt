@@ -47,6 +47,7 @@ nb-NO
 ne-NP
 nl
 nn-NO
+oc
 pl
 pt-BR
 ro
@@ -64,6 +65,7 @@ trs
 uk
 ur
 vi
+wo
 zam
 zh-CN
 zh-TW
