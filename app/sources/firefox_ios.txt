@@ -1,4 +1,5 @@
 af
+an
 ar
 ast
 az
@@ -27,6 +28,7 @@ gd
 gl
 he
 hi-IN
+hr
 hsb
 hu
 hy-AM
