@@ -14,6 +14,7 @@ br
 bs
 ca
 cak
+crh
 cs
 cy
 da
@@ -32,6 +33,7 @@ fa
 ff
 fi
 fr
+fur
 fy-NL
 ga-IE
 gd
