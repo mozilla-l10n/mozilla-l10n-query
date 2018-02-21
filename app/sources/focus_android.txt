@@ -1,5 +1,6 @@
 am
 an
+anp
 ar
 ast
 az
@@ -26,6 +27,7 @@ fi
 fr
 fy-NL
 ga-IE
+gu-IN
 he
 hi-IN
 hr
