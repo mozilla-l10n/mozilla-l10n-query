@@ -67,6 +67,7 @@ te
 th
 tr
 trs
+tt
 uk
 ur
 vi
