@@ -3,9 +3,26 @@
 
 import json
 import os
-import urllib
-import urllib2
-import sys
+# Python 2/3 compatibility
+try:
+    from urllib import quote_plus as urlquote
+except ImportError:
+    from urllib.parse import quote as urlquote
+try:
+    from urllib2 import urlopen
+except ImportError:
+    from urllib.request import urlopen
+
+try:
+    dict.iteritems
+except AttributeError:
+    # Python 3
+    def iteritems(d):
+        return iter(d.items())
+else:
+    # Python 2
+    def iteritems(d):
+        return d.iteritems()
 
 
 def saveTextFile(sources_folder, filename, locales, subfolder = ''):
@@ -14,7 +31,7 @@ def saveTextFile(sources_folder, filename, locales, subfolder = ''):
         sources_folder = os.path.join(sources_folder, subfolder)
     output_file = open(os.path.join(sources_folder, '{}.txt'.format(filename)), 'w')
     for locale in locales:
-        output_file.write(locale + '\n')
+        output_file.write('{}\n'.format(locale))
     output_file.close()
 
 
@@ -121,11 +138,11 @@ fragment allLocales on Project {
 }
 ''';
     try:
-        url = 'https://pontoon.mozilla.org/graphql?query={}'.format(urllib.quote_plus(query))
+        url = 'https://pontoon.mozilla.org/graphql?query={}'.format(urlquote(query))
         print('Reading sources for Pontoon')
-        response = urllib2.urlopen(url)
+        response = urlopen(url)
         json_data = json.load(response)
-        for project, project_data in json_data['data'].iteritems():
+        for project, project_data in iteritems(json_data['data']):
             if project == 'mozillaorg':
                 for element in project_data['localizations']:
                     code = element['locale']['code']
@@ -139,18 +156,18 @@ fragment allLocales on Project {
     except Exception as e:
         print(e)
 
-    for filename, locales in pontoon_locales.iteritems():
+    for filename, locales in iteritems(pontoon_locales):
         locales.sort()
         saveTextFile(sources_folder, filename, locales, 'tools')
 
-    for id, update_source in update_sources.iteritems():
+    for id, update_source in iteritems(update_sources):
         supported_locales = []
         for url in update_source['sources']:
             print('Reading sources for {} from {}'.format(id, url))
-            response = urllib2.urlopen(url)
+            response = urlopen(url)
             if update_source['format'] == 'txt':
                 for locale in response:
-                    locale = locale.rstrip()
+                    locale = locale.rstrip().decode()
                     if 'shipped-locales' in url:
                         # Remove platform from shipped-locales
                         for text in ['linux', 'osx', 'win32']:

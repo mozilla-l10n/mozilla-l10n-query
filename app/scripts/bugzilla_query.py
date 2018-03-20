@@ -4,7 +4,11 @@
 import collections
 import json
 import os
-import urllib2
+# Python 2/3 compatibility
+try:
+    from urllib2 import urlopen
+except ImportError:
+    from urllib.request import urlopen
 
 def main():
     nested_dict = lambda: collections.defaultdict(nested_dict)
@@ -22,7 +26,7 @@ def main():
     # Unescaped URL: https://bugzilla.mozilla.org/jsonrpc.cgi?method=Bug.fields&params=[ { 'names': ['cf_locale'] } ]
     json_url = 'https://bugzilla.mozilla.org/jsonrpc.cgi?method=Bug.fields&params=%5B%20{%20%22names%22:%20%5B%22cf_locale%22%5D%20}%20%5D'
     try:
-        response = urllib2.urlopen(json_url)
+        response = urlopen(json_url)
         json_data = json.load(response)
         try:
             for component in json_data['result']['fields'][0]['values']:
@@ -35,17 +39,17 @@ def main():
                 )
 
         except Exception as e:
-            print 'Error extracting data from json response'
-            print e
+            print('Error extracting data from json response')
+            print(e)
     except Exception as e:
-        print 'Error reading json reply from ' + json_url
-        print e
+        print('Error reading json reply from {}'.format(json_url))
+        print(e)
 
     # Get list of components of the Mozilla Localizations product
     # Unescaped URL: https://bugzilla.mozilla.org/jsonrpc.cgi?method=Product.get&params=[ { 'names': ['Mozilla Localizations'] } ]
     json_url = 'https://bugzilla.mozilla.org/jsonrpc.cgi?method=Product.get&params=[%20{%20%22names%22:%20[%22Mozilla%20Localizations%22]%20}%20]'
     try:
-        response = urllib2.urlopen(json_url)
+        response = urlopen(json_url)
         json_data = json.load(response)
         try:
             for component in json_data['result']['products'][0]['components']:
@@ -63,11 +67,11 @@ def main():
                     )
 
         except Exception as e:
-            print 'Error extracting data from json response'
-            print e
+            print('Error extracting data from json response')
+            print(e)
     except Exception as e:
-        print 'Error reading json reply from ' + json_url
-        print e
+        print('Error reading json reply from {}'.format(json_url))
+        print(e)
 
     # Write list of components name
     cache_file = open(output_filename, 'w')
