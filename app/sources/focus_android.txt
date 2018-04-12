@@ -37,6 +37,7 @@ hy-AM
 ia
 id
 it
+ixl
 ja
 ka
 kab

@@ -65,6 +65,7 @@ lij
 lo
 lt
 ltg
+lus
 lv
 mai
 meh
@@ -82,6 +83,7 @@ oc
 or
 pa-IN
 pai
+pl
 pt-BR
 pt-PT
 quy
