@@ -25,7 +25,7 @@ else:
         return d.iteritems()
 
 
-def saveTextFile(sources_folder, filename, locales, subfolder = ''):
+def saveTextFile(sources_folder, filename, locales, subfolder=''):
     print('Writing file {}.txt'.format(filename))
     if subfolder != '':
         sources_folder = os.path.join(sources_folder, subfolder)
@@ -37,7 +37,7 @@ def saveTextFile(sources_folder, filename, locales, subfolder = ''):
 
 def main():
     update_sources = {
-        'central' : {
+        'central': {
             'sources': [
                 'https://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales',
                 'https://hg.mozilla.org/mozilla-central/raw-file/default/mobile/android/locales/all-locales',
@@ -46,7 +46,7 @@ def main():
             'format': 'txt',
             'gecko_strings': True,
         },
-        'beta' : {
+        'beta': {
             'sources': [
                 'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/shipped-locales',
                 'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/mobile/android/locales/maemo-locales',
@@ -55,7 +55,7 @@ def main():
             'format': 'txt',
             'gecko_strings': True,
         },
-        'release' : {
+        'release': {
             'sources': [
                 'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/browser/locales/shipped-locales',
                 'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/mobile/android/locales/maemo-locales',
@@ -64,7 +64,7 @@ def main():
             'format': 'txt',
             'gecko_strings': True,
         },
-        'firefox_ios' : {
+        'firefox_ios': {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=firefox-ios&txt',
             ],
@@ -72,7 +72,7 @@ def main():
             'format': 'txt',
             'gecko_strings': False,
         },
-        'focus_android' : {
+        'focus_android': {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=focus-android&txt',
             ],
@@ -80,7 +80,7 @@ def main():
             'format': 'txt',
             'gecko_strings': False,
         },
-        'focus_ios' : {
+        'focus_ios': {
             'sources': [
                 'https://l10n.mozilla-community.org/webstatus/api/?product=focus-ios&txt',
             ],
@@ -88,7 +88,7 @@ def main():
             'format': 'txt',
             'gecko_strings': False,
         },
-        'mozilla.org' : {
+        'mozilla.org': {
             'sources': [
                 'https://l10n.mozilla-community.org/langchecker/?action=listlocales&website=0&json',
             ],
@@ -100,10 +100,7 @@ def main():
 
     # Get absolute path of ../sources from current script location (not current folder)
     sources_folder = os.path.abspath(
-                        os.path.join(os.path.dirname( __file__ ),
-                        os.pardir,
-                        'sources')
-                    )
+        os.path.join(os.path.dirname(__file__), os.pardir, 'sources'))
 
     # Gecko-strings channel is a special repository including all locales
     # shipping across all the branches. It also includes en-US
@@ -136,7 +133,7 @@ fragment allLocales on Project {
     }
   }
 }
-''';
+'''
     try:
         url = 'https://pontoon.mozilla.org/graphql?query={}'.format(urlquote(query))
         print('Reading sources for Pontoon')

@@ -4,21 +4,20 @@
 import collections
 import json
 import os
+
 # Python 2/3 compatibility
 try:
     from urllib2 import urlopen
 except ImportError:
     from urllib.request import urlopen
 
+
 def main():
     nested_dict = lambda: collections.defaultdict(nested_dict)
 
     # Get absolute path of ../sources from current script location (not current folder)
     sources_folder = os.path.abspath(
-                        os.path.join(os.path.dirname( __file__ ),
-                        os.pardir,
-                        'sources')
-                    )
+        os.path.join(os.path.dirname(__file__), os.pardir, 'sources'))
     output_filename = os.path.join(sources_folder, 'bugzilla_components.json')
     json_components = nested_dict()
 
@@ -58,7 +57,7 @@ def main():
                     'Documentation', 'Infrastructure',
                     'Other', 'Registration & Management'
                 ]
-                if not locale in excluded_components:
+                if locale not in excluded_components:
                     json_components['mozilla_localizations'][locale] = (
                         {
                             'full_name': component['name'],
