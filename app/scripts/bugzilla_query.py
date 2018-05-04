@@ -12,9 +12,16 @@ except ImportError:
     from urllib.request import urlopen
 
 
-def main():
-    nested_dict = lambda: collections.defaultdict(nested_dict)
+def nested_dict():
+    '''
+        Create a dictionary that auto-generates keys when trying to set a
+        a value for a key that doesn't exist (no need to check for its
+        existence)
+    '''
+    return collections.defaultdict(nested_dict)
 
+
+def main():
     # Get absolute path of ../sources from current script location (not current folder)
     sources_folder = os.path.abspath(
         os.path.join(os.path.dirname(__file__), os.pardir, 'sources'))
