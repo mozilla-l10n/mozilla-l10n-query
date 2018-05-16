@@ -16,6 +16,7 @@ da
 de
 dsb
 el
+en-CA
 eo
 es-AR
 es-CL

@@ -36,6 +36,7 @@ fa
 ff
 fi
 fr
+frp
 fur
 fy-NL
 ga-IE
@@ -51,6 +52,7 @@ hu
 hy-AM
 ia
 id
+ilo
 is
 jiv
 ka
