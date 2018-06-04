@@ -57,6 +57,7 @@ ne-NP
 nl
 nn-NO
 oc
+pai
 pl
 pt-BR
 ro
