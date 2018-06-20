@@ -4,6 +4,7 @@ an
 anp
 ar
 ast
+ay
 az
 bg
 bn-BD
@@ -57,9 +58,11 @@ ne-NP
 nl
 nn-NO
 oc
+pa-IN
 pai
 pl
 pt-BR
+quy
 ro
 ru
 sk

@@ -90,6 +90,7 @@ ta
 te
 th
 tr
+trs
 uk
 ur
 uz
