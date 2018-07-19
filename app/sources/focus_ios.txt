@@ -42,6 +42,7 @@ kk
 kn
 ko
 lo
+lt
 mr
 ms
 my

@@ -61,7 +61,9 @@ oc
 pa-IN
 pai
 pl
+ppl
 pt-BR
+quc
 quy
 ro
 ru
