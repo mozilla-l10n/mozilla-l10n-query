@@ -54,6 +54,7 @@ ia
 id
 ilo
 is
+it
 jiv
 ka
 kab
