@@ -42,6 +42,7 @@ id
 it
 ixl
 ja
+jv
 ka
 kab
 kk
@@ -71,6 +72,7 @@ sk
 sl
 sq
 sr
+su
 sv-SE
 ta
 te

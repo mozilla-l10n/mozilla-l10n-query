@@ -38,6 +38,7 @@ id
 is
 it
 ja
+jv
 ka
 kab
 kk
@@ -69,6 +70,7 @@ si
 sk
 sl
 sq
+su
 sv-SE
 ta
 te
