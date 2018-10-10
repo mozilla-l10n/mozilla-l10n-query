@@ -29,6 +29,7 @@ es-AR
 es-CL
 es-ES
 es-MX
+et
 eu
 fa
 ff
@@ -69,6 +70,7 @@ ms
 my
 nb-NO
 ne-NP
+nl
 nn-NO
 oc
 or

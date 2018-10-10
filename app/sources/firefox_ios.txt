@@ -1,5 +1,6 @@
 af
 an
+anp
 ar
 ast
 az

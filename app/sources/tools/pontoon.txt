@@ -55,6 +55,7 @@ id
 ilo
 is
 it
+ja
 jiv
 ka
 kab
@@ -81,6 +82,7 @@ ms
 my
 nb-NO
 ne-NP
+nl
 nn-NO
 ny
 oc

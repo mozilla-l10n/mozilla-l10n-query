@@ -1,3 +1,4 @@
+ace
 af
 am
 an
@@ -9,6 +10,7 @@ az
 bg
 bn-BD
 bn-IN
+bo
 bs
 ca
 cak
@@ -30,12 +32,14 @@ fi
 fr
 fy-NL
 ga-IE
+gl
 gu-IN
 he
 hi-IN
 hr
 hsb
 hu
+hus
 hy-AM
 ia
 id
@@ -52,6 +56,7 @@ lo
 lt
 meh
 mix
+mr
 ms
 my
 nb-NO
@@ -85,6 +90,7 @@ uk
 ur
 vi
 wo
+yua
 zam
 zh-CN
 zh-TW
