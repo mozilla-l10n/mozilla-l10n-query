@@ -14,6 +14,7 @@ bo
 bs
 ca
 cak
+co
 cs
 cy
 da
@@ -63,6 +64,7 @@ nb-NO
 ne-NP
 nl
 nn-NO
+nv
 oc
 pa-IN
 pai
@@ -75,6 +77,7 @@ ro
 ru
 sk
 sl
+sn
 sq
 sr
 su
@@ -93,4 +96,5 @@ wo
 yua
 zam
 zh-CN
+zh-HK
 zh-TW
