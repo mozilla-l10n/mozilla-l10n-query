@@ -81,7 +81,8 @@ def main():
 
     # Write list of components name
     cache_file = open(output_filename, 'w')
-    cache_file.write(json.dumps(json_components, sort_keys=True, indent=2))
+    cache_file.write(json.dumps(
+        json_components, sort_keys=True, indent=2))
     cache_file.close()
 
 

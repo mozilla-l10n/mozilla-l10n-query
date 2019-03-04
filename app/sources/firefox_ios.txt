@@ -6,6 +6,7 @@ ast
 az
 bg
 bn
+bo
 br
 bs
 ca
@@ -29,6 +30,7 @@ fr
 ga-IE
 gd
 gl
+gu-IN
 he
 hi-IN
 hr
@@ -82,5 +84,6 @@ tr
 uk
 ur
 uz
+vi
 zh-CN
 zh-TW
