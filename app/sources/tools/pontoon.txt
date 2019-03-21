@@ -9,8 +9,8 @@ ast
 az
 be
 bg
-bn-BD
-bn-IN
+bn
+bo
 br
 bs
 ca
