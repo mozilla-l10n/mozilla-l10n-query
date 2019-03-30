@@ -2,13 +2,11 @@ ach
 af
 an
 ar
-as
 ast
 az
 be
 bg
-bn-BD
-bn-IN
+bn
 br
 bs
 ca
@@ -22,7 +20,6 @@ dsb
 el
 en-CA
 en-GB
-en-ZA
 eo
 es-AR
 es-CL
@@ -63,7 +60,6 @@ lo
 lt
 ltg
 lv
-mai
 meh
 mix
 mk
@@ -76,7 +72,6 @@ ne-NP
 nl
 nn-NO
 oc
-or
 pa-IN
 pl
 pt-BR
