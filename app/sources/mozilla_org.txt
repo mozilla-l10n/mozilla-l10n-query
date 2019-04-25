@@ -3,12 +3,12 @@ af
 am
 an
 ar
-as
 ast
 az
 azz
 be
 bg
+bn
 bn-BD
 bn-IN
 br
@@ -24,7 +24,6 @@ dsb
 el
 en-CA
 en-GB
-en-ZA
 eo
 es-AR
 es-CL
@@ -65,7 +64,6 @@ lo
 lt
 ltg
 lv
-mai
 mk
 ml
 mr
@@ -77,7 +75,6 @@ nl
 nn-NO
 nv
 oc
-or
 pa-IN
 pai
 pbb

@@ -3,14 +3,12 @@ af
 am
 an
 ar
-as
 ast
 az
 azz
 be
 bg
-bn-BD
-bn-IN
+bn
 br
 bs
 ca
@@ -62,7 +60,6 @@ lo
 lt
 ltg
 lv
-mai
 mk
 ml
 mr
@@ -73,7 +70,6 @@ ne-NP
 nl
 nn-NO
 oc
-or
 pa-IN
 pl
 pt-BR
