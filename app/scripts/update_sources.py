@@ -124,6 +124,9 @@ def main():
   mozillaorg: project(slug: "mozillaorg") {
     ...allLocales
   }
+  androidl10n: project(slug: "android-l10n") {
+    ...allLocales
+  }
 }
 
 fragment allLocales on Project {
@@ -140,16 +143,20 @@ fragment allLocales on Project {
         response = urlopen(url)
         json_data = json.load(response)
         for project, project_data in iteritems(json_data['data']):
-            if project == 'mozillaorg':
-                for element in project_data['localizations']:
-                    code = element['locale']['code']
-                    if code not in pontoon_locales['pontoon-mozorg']:
-                        pontoon_locales['pontoon-mozorg'].append(code)
-            else:
-                for element in project_data['localizations']:
-                    code = element['locale']['code']
-                    if code not in pontoon_locales['pontoon']:
-                        pontoon_locales['pontoon'].append(code)
+            pontoon_bucket = 'pontoon-mozorg' if project == 'mozillaorg' else 'pontoon'
+            for element in project_data['localizations']:
+                code = element['locale']['code']
+                if code not in pontoon_locales[pontoon_bucket]:
+                    pontoon_locales[pontoon_bucket].append(code)
+
+        # Store android-l10n
+        android_locales = []
+        for element in json_data['data']['androidl10n']['localizations']:
+            android_locales.append(element['locale']['code'])
+        android_locales.sort()
+        saveTextFile(sources_folder,
+                     'android_l10n', android_locales)
+
     except Exception as e:
         print(e)
 

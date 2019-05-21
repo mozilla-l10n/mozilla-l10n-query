@@ -9,8 +9,6 @@ azz
 be
 bg
 bn
-bn-BD
-bn-IN
 br
 bs
 ca
