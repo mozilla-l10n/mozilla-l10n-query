@@ -1,0 +1,10 @@
+de
+es
+es-ES
+fr
+it
+ja
+ko
+ru
+zh-CN
+zh-TW

@@ -26,6 +26,7 @@ el
 en-CA
 en-GB
 eo
+es
 es-AR
 es-CL
 es-ES
