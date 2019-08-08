@@ -45,6 +45,7 @@ gd
 gl
 gn
 gu-IN
+gv
 he
 hi-IN
 hr
