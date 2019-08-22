@@ -1,5 +1,6 @@
 ca
 cs
+da
 de
 es
 es-AR
@@ -13,12 +14,17 @@ id
 it
 ja
 ko
+nb-NO
 nl
+nn-NO
 pa-IN
 pl
 pt-BR
 ru
 sk
 sv-SE
+ta
+tr
+vi
 zh-CN
 zh-TW
