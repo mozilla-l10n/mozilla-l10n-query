@@ -64,14 +64,6 @@ def main():
             'format': 'txt',
             'gecko_strings': True,
         },
-        'firefox_ios': {
-            'sources': [
-                'https://l10n.mozilla-community.org/webstatus/api/?product=firefox-ios&txt',
-            ],
-            'filename': 'firefox_ios',
-            'format': 'txt',
-            'gecko_strings': False,
-        },
         'mozilla.org': {
             'sources': [
                 'https://l10n.mozilla-community.org/langchecker/?action=listlocales&website=0&json',
@@ -99,16 +91,19 @@ def main():
 
     query = '''
 {
+  fennec: project(slug: "firefox-for-android") {
+    ...allLocales
+  }
   firefox: project(slug: "firefox") {
     ...allLocales
   }
-  fennec: project(slug: "firefox-for-android") {
+  firefox_ios: project(slug: "firefox-for-ios") {
     ...allLocales
   }
   mozillaorg: project(slug: "mozillaorg") {
     ...allLocales
   }
-  androidl10n: project(slug: "android-l10n") {
+  android_l10n: project(slug: "android-l10n") {
     ...allLocales
   }
 }
@@ -133,14 +128,13 @@ fragment allLocales on Project {
                 if code not in pontoon_locales[pontoon_bucket]:
                     pontoon_locales[pontoon_bucket].append(code)
 
-        # Store android-l10n
-        android_locales = []
-        for element in json_data['data']['androidl10n']['localizations']:
-            android_locales.append(element['locale']['code'])
-        android_locales.sort()
-        saveTextFile(sources_folder,
-                     'android_l10n', android_locales)
-
+        # Store locales for android-l10n, Firefox iOS
+        for project in ['android_l10n', 'firefox_ios']:
+            locales = []
+            for element in json_data['data'][project]['localizations']:
+                locales.append(element['locale']['code'])
+            locales.sort()
+            saveTextFile(sources_folder, project, locales)
     except Exception as e:
         print(e)
 

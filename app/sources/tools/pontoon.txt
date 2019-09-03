@@ -2,6 +2,7 @@ ace
 ach
 af
 an
+anp
 ar
 arn
 as
@@ -16,6 +17,7 @@ brx
 bs
 ca
 cak
+co
 crh
 cs
 cv
@@ -61,6 +63,7 @@ it
 ixl
 ja
 jiv
+jv
 ka
 kab
 kk
@@ -103,12 +106,14 @@ ro
 ru
 sc
 scn
+ses
 si
 sk
 sl
 son
 sq
 sr
+su
 sv-SE
 sw
 ta
@@ -125,5 +130,6 @@ vi
 wo
 xh
 zam
+zgh
 zh-CN
 zh-TW
