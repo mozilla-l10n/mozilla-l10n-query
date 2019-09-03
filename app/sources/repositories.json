@@ -49,7 +49,7 @@
     },
     "mozilla_org": {
         "id": "mozilla_org",
-        "display_order": 6,
+        "display_order": 4,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
         "type": "web",
