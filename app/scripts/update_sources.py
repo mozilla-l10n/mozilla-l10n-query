@@ -72,22 +72,6 @@ def main():
             'format': 'txt',
             'gecko_strings': False,
         },
-        'focus_android': {
-            'sources': [
-                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-android&txt',
-            ],
-            'filename': 'focus_android',
-            'format': 'txt',
-            'gecko_strings': False,
-        },
-        'focus_ios': {
-            'sources': [
-                'https://l10n.mozilla-community.org/webstatus/api/?product=focus-ios&txt',
-            ],
-            'filename': 'focus_ios',
-            'format': 'txt',
-            'gecko_strings': False,
-        },
         'mozilla.org': {
             'sources': [
                 'https://l10n.mozilla-community.org/langchecker/?action=listlocales&website=0&json',

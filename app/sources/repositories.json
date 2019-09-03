@@ -47,22 +47,6 @@
         "type": "product",
         "enabled": true
     },
-    "focus_ios": {
-        "id": "focus_ios",
-        "display_order": 4,
-        "name": "Focus for iOS",
-        "locales": "focus_ios.txt",
-        "type": "product",
-        "enabled": true
-    },
-    "focus_android": {
-        "id": "focus_android",
-        "display_order": 5,
-        "name": "Focus for Android",
-        "locales": "focus_android.txt",
-        "type": "product",
-        "enabled": true
-    },
     "mozilla_org": {
         "id": "mozilla_org",
         "display_order": 6,
