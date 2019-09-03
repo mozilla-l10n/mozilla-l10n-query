@@ -12,6 +12,7 @@ bg
 bn
 bo
 br
+brx
 bs
 ca
 cak
