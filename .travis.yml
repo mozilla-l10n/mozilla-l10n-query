@@ -4,14 +4,14 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 php:
-  - 7.0
   - 7.2
+  - 7.3
 before_install:
   ## Disabling xdebug
   - phpenv config-rm xdebug.ini
 install:
   # Update composer, install dependencies
-  - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"    
+  - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
   - composer self-update
   - composer install $flags
 script:
