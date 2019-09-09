@@ -1,3 +1,4 @@
+bg
 ca
 cs
 da
@@ -10,6 +11,7 @@ eu
 fi
 fr
 gd
+hu
 id
 it
 ja
