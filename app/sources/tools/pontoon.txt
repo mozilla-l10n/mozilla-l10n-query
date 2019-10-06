@@ -16,6 +16,7 @@ br
 brx
 bs
 ca
+ca-valencia
 cak
 co
 crh
