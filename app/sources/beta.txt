@@ -10,6 +10,7 @@ bn
 br
 bs
 ca
+ca-valencia
 cak
 cs
 cy
@@ -85,6 +86,7 @@ sv-SE
 ta
 te
 th
+tl
 tr
 trs
 uk

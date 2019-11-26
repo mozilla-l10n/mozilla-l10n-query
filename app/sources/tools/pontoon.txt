@@ -98,8 +98,10 @@ or
 pa-IN
 pai
 pl
+ppl
 pt-BR
 pt-PT
+quc
 quy
 qvi
 rm
