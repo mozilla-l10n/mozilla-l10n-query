@@ -1,5 +1,6 @@
 bg
 ca
+co
 cs
 cy
 da
@@ -12,7 +13,9 @@ eu
 fa
 fi
 fr
+fy-NL
 gd
+gu-IN
 he
 hu
 id
@@ -25,7 +28,6 @@ ml
 nb-NO
 nl
 nn-NO
-oc
 pa-IN
 pl
 pt-BR
