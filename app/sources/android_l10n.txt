@@ -5,6 +5,7 @@ cs
 cy
 da
 de
+en-GB
 es
 es-AR
 es-ES
@@ -28,14 +29,18 @@ ml
 nb-NO
 nl
 nn-NO
+nv
 pa-IN
 pl
 pt-BR
 ru
 sk
+su
 sv-SE
 ta
 tr
+uk
+ur
 vi
 zh-CN
 zh-TW

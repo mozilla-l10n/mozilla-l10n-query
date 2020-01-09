@@ -93,6 +93,7 @@ nb-NO
 ne-NP
 nl
 nn-NO
+nv
 ny
 oc
 or
