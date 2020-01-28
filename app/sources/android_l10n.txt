@@ -5,6 +5,7 @@ cs
 cy
 da
 de
+dsb
 en-GB
 es
 es-AR
@@ -18,6 +19,7 @@ fy-NL
 gd
 gu-IN
 he
+hsb
 hu
 id
 it
