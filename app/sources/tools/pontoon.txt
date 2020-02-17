@@ -4,7 +4,6 @@ af
 an
 anp
 ar
-arn
 as
 ast
 az
@@ -21,7 +20,6 @@ cak
 co
 crh
 cs
-cv
 cy
 da
 de
@@ -64,7 +62,6 @@ is
 it
 ixl
 ja
-jiv
 jv
 ka
 kab
@@ -79,7 +76,6 @@ lij
 lo
 lt
 ltg
-lus
 lv
 mai
 meh
@@ -103,7 +99,6 @@ pl
 ppl
 pt-BR
 pt-PT
-quc
 quy
 qvi
 rm
@@ -111,6 +106,7 @@ ro
 ru
 sc
 scn
+sco
 ses
 si
 sk
@@ -131,6 +127,7 @@ tsz
 uk
 ur
 uz
+vec
 vi
 wo
 xcl
