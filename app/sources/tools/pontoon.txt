@@ -117,6 +117,7 @@ sr
 su
 sv-SE
 sw
+szl
 ta
 te
 th
