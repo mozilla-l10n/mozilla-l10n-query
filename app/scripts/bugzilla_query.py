@@ -1,16 +1,11 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import collections
 import json
 import os
 
-# Python 2/3 compatibility
-try:
-    from urllib2 import urlopen
-except ImportError:
-    from urllib.request import urlopen
-
+from urllib.request import urlopen
 
 def nested_dict():
     '''

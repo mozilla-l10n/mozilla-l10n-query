@@ -1,29 +1,11 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import json
 import os
-# Python 2/3 compatibility
-try:
-    from urllib import quote_plus as urlquote
-except ImportError:
-    from urllib.parse import quote as urlquote
-try:
-    from urllib2 import urlopen
-except ImportError:
-    from urllib.request import urlopen
 
-try:
-    dict.iteritems
-except AttributeError:
-    # Python 3
-    def iteritems(d):
-        return iter(d.items())
-else:
-    # Python 2
-    def iteritems(d):
-        return d.iteritems()
-
+from urllib.parse import quote as urlquote
+from urllib.request import urlopen
 
 def saveTextFile(sources_folder, filename, locales, subfolder=''):
     print('Writing file {}.txt'.format(filename))
@@ -121,7 +103,7 @@ fragment allLocales on Project {
         print('Reading sources for Pontoon')
         response = urlopen(url)
         json_data = json.load(response)
-        for project, project_data in iteritems(json_data['data']):
+        for project, project_data in json_data['data'].items():
             pontoon_bucket = 'pontoon-mozorg' if project == 'mozillaorg' else 'pontoon'
             for element in project_data['localizations']:
                 code = element['locale']['code']
@@ -138,11 +120,11 @@ fragment allLocales on Project {
     except Exception as e:
         print(e)
 
-    for filename, locales in iteritems(pontoon_locales):
+    for filename, locales in pontoon_locales.items():
         locales.sort()
         saveTextFile(sources_folder, filename, locales, 'tools')
 
-    for id, update_source in iteritems(update_sources):
+    for id, update_source in update_sources.items():
         supported_locales = []
         for url in update_source['sources']:
             print('Reading sources for {} from {}'.format(id, url))
