@@ -72,7 +72,6 @@ nn-NO
 oc
 pa-IN
 pl
-ppl
 pt-BR
 pt-PT
 rm
