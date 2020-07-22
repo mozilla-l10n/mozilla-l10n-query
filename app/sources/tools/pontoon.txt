@@ -105,6 +105,7 @@ qvi
 rm
 ro
 ru
+sat-Olck
 sc
 scn
 sco
