@@ -1,7 +1,6 @@
 .composer_cache
 .php_cs.cache
 app/config/config.yml
-app/sources/bugzilla_components.json
 composer.lock
 composer.phar
 vendor

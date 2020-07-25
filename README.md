@@ -6,8 +6,6 @@ Web service to provide data like supported locales for a product, Bugzilla compo
 ## Installation
 Install [Composer](https://getcomposer.org/) and its dependencies.
 
-Run `/app/scripts/bugzilla_query.py` at least once to populate the list of Bugzilla locales. A daily cronjob should be added for this task on a production server. Make sure that the output folder `app/sources` is writable by the user running this script (output file is `bugzilla_components.json`).
-
 ## Available URLs
 ```
 /
