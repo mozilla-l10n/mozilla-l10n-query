@@ -122,6 +122,7 @@ sw
 szl
 ta
 te
+tg
 th
 tl
 tr

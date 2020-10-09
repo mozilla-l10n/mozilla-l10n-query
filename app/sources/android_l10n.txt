@@ -71,6 +71,7 @@ pt-PT
 rm
 ro
 ru
+sat-Olck
 sk
 sl
 sq
@@ -79,7 +80,9 @@ su
 sv-SE
 ta
 te
+tg
 th
+tl
 tr
 trs
 uk
