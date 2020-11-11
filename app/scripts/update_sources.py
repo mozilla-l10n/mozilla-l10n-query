@@ -3,9 +3,9 @@
 
 import json
 import os
-
 from urllib.parse import quote as urlquote
 from urllib.request import urlopen
+
 
 def saveTextFile(sources_folder, filename, locales, subfolder=''):
     print('Writing file {}.txt'.format(filename))

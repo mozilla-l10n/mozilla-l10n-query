@@ -4,8 +4,8 @@
 import collections
 import json
 import os
-
 from urllib.request import urlopen
+
 
 def nested_dict():
     '''
