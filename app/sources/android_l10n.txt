@@ -71,7 +71,7 @@ pt-PT
 rm
 ro
 ru
-sat-Olck
+sat
 sk
 sl
 sq
