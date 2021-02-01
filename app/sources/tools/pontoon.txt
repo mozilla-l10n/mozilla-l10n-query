@@ -68,6 +68,7 @@ ka
 kab
 kk
 km
+kmr
 kn
 ko
 ks

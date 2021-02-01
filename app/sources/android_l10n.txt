@@ -49,6 +49,7 @@ ja
 ka
 kab
 kk
+kmr
 kn
 ko
 lij
