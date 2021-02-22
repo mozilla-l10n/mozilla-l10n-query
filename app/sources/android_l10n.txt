@@ -9,6 +9,7 @@ br
 bs
 ca
 cak
+ceb
 co
 cs
 cy
@@ -38,6 +39,7 @@ gn
 gu-IN
 he
 hi-IN
+hil
 hr
 hsb
 hu
