@@ -17,6 +17,7 @@ bs
 ca
 ca-valencia
 cak
+ceb
 ckb
 co
 crh
@@ -51,6 +52,7 @@ gu-IN
 gv
 he
 hi-IN
+hil
 hr
 hsb
 hu
