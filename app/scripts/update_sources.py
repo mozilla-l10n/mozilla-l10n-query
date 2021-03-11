@@ -88,6 +88,9 @@ def main():
   android_l10n: project(slug: "android-l10n") {
     ...allLocales
   }
+  vpn_client: project(slug: "mozilla-vpn-client") {
+    ...allLocales
+  }
 }
 
 fragment allLocales on Project {
@@ -111,7 +114,7 @@ fragment allLocales on Project {
                     pontoon_locales[pontoon_bucket].append(code)
 
         # Store locales for android-l10n, Firefox iOS
-        for project in ['android_l10n', 'firefox_ios']:
+        for project in ['android_l10n', 'firefox_ios', 'vpn_client']:
             locales = []
             for element in json_data['data'][project]['localizations']:
                 locales.append(element['locale']['code'])

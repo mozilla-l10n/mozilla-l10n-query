@@ -54,5 +54,13 @@
         "locales": "mozilla_org.txt",
         "type": "web",
         "enabled": true
+    },
+    "vpn_client": {
+        "id": "vpn_client",
+        "display_order": 5,
+        "name": "VPN Client",
+        "locales": "vpn_client.txt",
+        "type": "product",
+        "enabled": true
     }
 }
