@@ -56,11 +56,9 @@ km
 kn
 ko
 lij
-lo
 lt
 lv
 mk
-ml
 mr
 ms
 my
@@ -94,8 +92,6 @@ uk
 ur
 uz
 vi
-wo
 xh
-zam
 zh-CN
 zh-TW

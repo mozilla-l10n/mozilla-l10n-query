@@ -66,9 +66,7 @@ lt
 ltg
 lv
 meh
-mix
 mk
-ml
 mr
 ms
 my
@@ -105,6 +103,5 @@ uz
 vi
 wo
 xh
-zam
 zh-CN
 zh-TW

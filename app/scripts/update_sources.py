@@ -22,7 +22,6 @@ def main():
         'central': {
             'sources': [
                 'https://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales',
-                'https://hg.mozilla.org/mozilla-central/raw-file/default/mobile/android/locales/all-locales',
             ],
             'filename': 'central',
             'format': 'txt',
@@ -31,7 +30,6 @@ def main():
         'beta': {
             'sources': [
                 'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/shipped-locales',
-                'https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/mobile/android/locales/maemo-locales',
             ],
             'filename': 'beta',
             'format': 'txt',
@@ -40,19 +38,10 @@ def main():
         'release': {
             'sources': [
                 'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/browser/locales/shipped-locales',
-                'https://hg.mozilla.org/releases/mozilla-release/raw-file/default/mobile/android/locales/maemo-locales',
             ],
             'filename': 'release',
             'format': 'txt',
             'gecko_strings': True,
-        },
-        'mozilla.org': {
-            'sources': [
-                'https://l10n.mozilla-community.org/langchecker/?action=listlocales&website=0&json',
-            ],
-            'filename': 'mozilla_org',
-            'format': 'json',
-            'gecko_strings': False,
         },
     }
 
@@ -73,16 +62,13 @@ def main():
 
     query = '''
 {
-  fennec: project(slug: "firefox-for-android") {
-    ...allLocales
-  }
   firefox: project(slug: "firefox") {
     ...allLocales
   }
   firefox_ios: project(slug: "firefox-for-ios") {
     ...allLocales
   }
-  mozillaorg: project(slug: "mozillaorg") {
+  mozilla_org: project(slug: "mozillaorg") {
     ...allLocales
   }
   android_l10n: project(slug: "android-l10n") {
@@ -107,14 +93,17 @@ fragment allLocales on Project {
         response = urlopen(url)
         json_data = json.load(response)
         for project, project_data in json_data['data'].items():
-            pontoon_bucket = 'pontoon-mozorg' if project == 'mozillaorg' else 'pontoon'
+            pontoon_bucket = 'pontoon-mozorg' if project == 'mozilla_org' else 'pontoon'
             for element in project_data['localizations']:
                 code = element['locale']['code']
                 if code not in pontoon_locales[pontoon_bucket]:
                     pontoon_locales[pontoon_bucket].append(code)
 
-        # Store locales for android-l10n, Firefox iOS
-        for project in ['android_l10n', 'firefox_ios', 'vpn_client']:
+        # Store locales for projects in Pontoon, excluded Firefox
+        projects = list(json_data['data'].keys())
+        for project in projects:
+            if project == 'firefox':
+                continue
             locales = []
             for element in json_data['data'][project]['localizations']:
                 locales.append(element['locale']['code'])
@@ -135,10 +124,6 @@ fragment allLocales on Project {
             if update_source['format'] == 'txt':
                 for locale in response:
                     locale = locale.rstrip().decode()
-                    if 'shipped-locales' in url:
-                        # Remove platform from shipped-locales
-                        for text in ['linux', 'osx', 'win32']:
-                            locale = locale.replace(text, '').rstrip()
                     if locale not in ['', 'en-US'] and locale not in supported_locales:
                         supported_locales.append(locale)
             else:
