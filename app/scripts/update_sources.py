@@ -71,7 +71,10 @@ def main():
   mozilla_org: project(slug: "mozillaorg") {
     ...allLocales
   }
-  android_l10n: project(slug: "android-l10n") {
+  android_l10n_fenix: project(slug: "firefox-for-android") {
+    ...allLocales
+  }
+  android_l10n_lockwise: project(slug: "lockwise-for-android") {
     ...allLocales
   }
   vpn_client: project(slug: "mozilla-vpn-client") {
@@ -99,16 +102,28 @@ fragment allLocales on Project {
                 if code not in pontoon_locales[pontoon_bucket]:
                     pontoon_locales[pontoon_bucket].append(code)
 
-        # Store locales for projects in Pontoon, excluded Firefox
+        # Store locales for projects in Pontoon
         projects = list(json_data['data'].keys())
+        output = {}
         for project in projects:
+            # Ignore Firefox, since the list is coming from hg
             if project == 'firefox':
                 continue
+
+            # Need to group different projects for android-l10n
+            project_dest = "android_l10n" if project.startswith("android_l10n") else project
+
             locales = []
-            for element in json_data['data'][project]['localizations']:
+            for element in json_data['data'][project_dest]['localizations']:
                 locales.append(element['locale']['code'])
             locales.sort()
-            saveTextFile(sources_folder, project, locales)
+
+            if project_dest not in output:
+                output[project_dest] = locales
+            else:
+                output[project_dest] = list(set(output[project_dest] + locales))
+
+            saveTextFile(sources_folder, project_dest, locales)
     except Exception as e:
         print(e)
 
