@@ -2,7 +2,6 @@ ach
 af
 am
 an
-ar
 ast
 az
 azz
@@ -85,6 +84,7 @@ sr
 sv-SE
 ta
 te
+tg
 th
 tl
 tr
