@@ -2,6 +2,7 @@ ach
 af
 am
 an
+ar
 ast
 az
 azz
@@ -39,12 +40,15 @@ gl
 gn
 gu-IN
 he
+hi-IN
 hr
 hsb
 hu
 hy-AM
 ia
+id
 it
+ja
 ka
 kab
 kk
@@ -59,6 +63,7 @@ lv
 mk
 ml
 mr
+ms
 my
 nb-NO
 ne-NP
