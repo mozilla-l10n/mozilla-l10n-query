@@ -44,6 +44,7 @@ hr
 hsb
 hu
 hy-AM
+ia
 id
 is
 it
@@ -68,6 +69,7 @@ nl
 nn-NO
 nv
 oc
+or
 pa-IN
 pl
 pt-BR
@@ -82,6 +84,7 @@ sq
 sr
 su
 sv-SE
+szl
 ta
 te
 tg
@@ -89,6 +92,7 @@ th
 tl
 tr
 trs
+tt
 uk
 ur
 uz
