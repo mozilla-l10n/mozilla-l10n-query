@@ -17,6 +17,7 @@ jobs:
 
       - name: Run update scripts
         run: |
+          pip install toml
           python app/scripts/bugzilla_query.py
           python app/scripts/update_sources.py
 

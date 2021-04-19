@@ -3,6 +3,7 @@
 
 import json
 import os
+import toml
 from urllib.parse import quote as urlquote
 from urllib.request import urlopen
 
@@ -117,16 +118,28 @@ fragment allLocales on Project {
             )
 
             locales = []
-            for element in json_data["data"][project_dest]["localizations"]:
+            for element in json_data["data"][project]["localizations"]:
                 locales.append(element["locale"]["code"])
-            locales.sort()
+
+            """
+            For mozilla.org, need to take into account locales not enabled in
+            Pontoon but in Smartling, available in a TOML file.
+            """
+            if project == "mozilla_org":
+                url = "https://raw.githubusercontent.com/mozilla-l10n/www-l10n/master/configs/vendor.toml"
+                response = urlopen(url).read()
+                parsed_toml = toml.loads(response.decode("utf-8"))
+                locales += parsed_toml["locales"]
 
             if project_dest not in output:
                 output[project_dest] = locales
             else:
                 output[project_dest] = list(set(output[project_dest] + locales))
 
-            saveTextFile(sources_folder, project_dest, locales)
+        # Save to file
+        for project, locales in output.items():
+            locales.sort()
+            saveTextFile(sources_folder, project, locales)
     except Exception as e:
         print(e)
 
