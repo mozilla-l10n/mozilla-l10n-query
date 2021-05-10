@@ -10,6 +10,7 @@ bs
 ca
 cak
 ceb
+ckb
 co
 cs
 cy
@@ -93,6 +94,7 @@ tl
 tr
 trs
 tt
+tzm
 uk
 ur
 uz
