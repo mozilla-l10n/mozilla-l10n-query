@@ -416,6 +416,10 @@
       "description": "Santali",
       "full_name": "sat / Santali"
     },
+    "sco": {
+      "description": "Scots",
+      "full_name": "sco / Scots"
+    },
     "si": {
       "description": "Sinhala",
       "full_name": "si / Sinhala"
@@ -969,6 +973,10 @@
     "sat": {
       "description": "Santali",
       "full_name": "sat / Santali"
+    },
+    "sco": {
+      "description": "Scots",
+      "full_name": "sco / Scots"
     },
     "si": {
       "description": "Sinhala",
