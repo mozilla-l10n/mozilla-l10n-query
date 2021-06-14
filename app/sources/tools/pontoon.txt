@@ -7,6 +7,7 @@ ar
 as
 ast
 az
+ban
 be
 bg
 bn
@@ -141,6 +142,7 @@ vi
 wo
 xcl
 xh
+yo
 zam
 zgh
 zh-CN
