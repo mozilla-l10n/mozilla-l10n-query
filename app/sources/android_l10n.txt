@@ -2,6 +2,7 @@ an
 ar
 ast
 az
+ban
 be
 bg
 bn
@@ -100,5 +101,6 @@ ur
 uz
 vec
 vi
+yo
 zh-CN
 zh-TW

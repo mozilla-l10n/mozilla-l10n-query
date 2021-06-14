@@ -7,6 +7,7 @@ el
 en-CA
 en-GB
 es-AR
+es-ES
 es-MX
 fr
 fy-NL
