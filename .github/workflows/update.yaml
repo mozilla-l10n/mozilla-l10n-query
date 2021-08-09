@@ -1,7 +1,7 @@
 name: Update locales
 on:
   schedule:
-    - cron: '0 8 * * 1' #  At 8:00 on every Monday
+    - cron: '0 8 * * 1-5' #  At 8:00 on every Monday
   workflow_dispatch:
 jobs:
   run:
