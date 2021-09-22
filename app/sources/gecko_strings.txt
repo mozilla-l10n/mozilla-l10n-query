@@ -82,6 +82,7 @@ pt-PT
 rm
 ro
 ru
+sat
 scn
 sco
 si
