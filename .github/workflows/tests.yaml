@@ -2,7 +2,7 @@ name: Run Tests
 on:
   # Triggers the workflow on pull request events but only for the main branch
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     types: [ opened, synchronize, reopened ]
   workflow_dispatch:
 jobs:

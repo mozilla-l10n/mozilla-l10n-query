@@ -10,7 +10,7 @@ $composer = $app_root . '/composer.phar';
 require $app_root . '/vendor/autoload.php';
 
 // Git variables
-$branch = 'master';
+$branch = 'main';
 $header = 'HTTP_X_HUB_SIGNATURE';
 
 $config_file = $app_root . '/app/config/config.yml';
