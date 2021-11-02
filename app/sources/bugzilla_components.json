@@ -662,6 +662,10 @@
       "description": "English (United Kingdom)",
       "full_name": "en-GB / English (United Kingdom)"
     },
+    "en-US": {
+      "description": "English (United States)",
+      "full_name": "en-US / English (United States)"
+    },
     "en-ZA": {
       "description": "English (South Africa)",
       "full_name": "en-ZA / English (South Africa)"
