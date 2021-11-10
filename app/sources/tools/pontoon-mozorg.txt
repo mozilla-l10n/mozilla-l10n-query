@@ -16,7 +16,6 @@ crh
 cs
 cy
 da
-de
 dsb
 el
 en-CA
@@ -31,7 +30,6 @@ eu
 fa
 ff
 fi
-fr
 fy-NL
 ga-IE
 gd
