@@ -1,5 +1,5 @@
 .composer_cache
-.php_cs.cache
+.php-cs-fixer.cache
 app/config/config.yml
 composer.lock
 composer.phar

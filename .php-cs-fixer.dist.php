@@ -13,7 +13,9 @@ $config
                   '=>' => 'align',
                 ],
             ],
-            'blank_line_before_statement' => true,
+            'blank_line_before_statement' => [
+                'statements' => ['return']
+            ],
             'cast_spaces'              => true,
             'concat_space'             => [
                 'spacing' => 'one',
