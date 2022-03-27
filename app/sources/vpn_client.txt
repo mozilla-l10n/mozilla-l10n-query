@@ -11,12 +11,14 @@ es-AR
 es-CL
 es-ES
 es-MX
+fi
 fr
 fy-NL
 hsb
 hu
 ia
 id
+is
 it
 ja
 nl
