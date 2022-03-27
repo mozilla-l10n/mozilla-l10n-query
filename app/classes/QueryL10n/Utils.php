@@ -84,13 +84,16 @@ class Utils
             case 'green':
                 // White on green
                 $output = "\033[1;37m\033[42m{$text}";
+
                 break;
             case 'red':
                 // White on red
                 $output = "\033[1;37m\033[41m{$text}";
+
                 break;
             default:
                 $output = $text;
+
                 break;
         }
         $output .= "\033[0m\n";
