@@ -1,7 +1,7 @@
 <?php
 namespace tests\units\QueryL10n;
 
-use atoum;
+use atoum\atoum;
 use QueryL10n\Repositories as _Repositories;
 
 require_once __DIR__ . '/../bootstrap.php';

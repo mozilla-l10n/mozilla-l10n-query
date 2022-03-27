@@ -1,7 +1,7 @@
 <?php
 namespace tests\units\QueryL10n;
 
-use atoum;
+use atoum\atoum;
 use QueryL10n\Bugzilla as _Bugzilla;
 
 require_once __DIR__ . '/../bootstrap.php';

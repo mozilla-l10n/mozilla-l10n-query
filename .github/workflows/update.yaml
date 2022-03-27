@@ -5,15 +5,15 @@ on:
   workflow_dispatch:
 jobs:
   run:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: Run update scripts
         run: |
@@ -22,7 +22,7 @@ jobs:
           python app/scripts/update_sources.py
 
       - run : git config --global user.email 'flodolo@users.noreply.github.com'
-      - uses: peter-evans/create-pull-request@v3
+      - uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "Update locales"
           branch-suffix: "timestamp"
