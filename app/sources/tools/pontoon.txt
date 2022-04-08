@@ -137,6 +137,7 @@ trs
 tsz
 tt
 tzm
+ug
 uk
 ur
 uz
