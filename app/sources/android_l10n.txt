@@ -99,6 +99,7 @@ tr
 trs
 tt
 tzm
+ug
 uk
 ur
 uz
