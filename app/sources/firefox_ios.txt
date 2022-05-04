@@ -73,6 +73,7 @@ ro
 ru
 sat
 ses
+si
 sk
 sl
 sq
