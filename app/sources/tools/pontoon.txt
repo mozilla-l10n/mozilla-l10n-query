@@ -118,6 +118,7 @@ sco
 ses
 si
 sk
+skr
 sl
 son
 sq
