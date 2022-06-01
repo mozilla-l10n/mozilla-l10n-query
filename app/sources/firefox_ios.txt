@@ -4,6 +4,7 @@ anp
 ar
 ast
 az
+be
 bg
 bn
 bo
