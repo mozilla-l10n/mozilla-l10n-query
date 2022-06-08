@@ -42,6 +42,7 @@ hsb
 hu
 hy-AM
 ia
+is
 it
 ka
 kab
