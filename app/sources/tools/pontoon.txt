@@ -2,12 +2,14 @@ ab
 ace
 ach
 af
+am
 an
 ann
 anp
 ar
 as
 ast
+ay
 az
 ban
 be
@@ -33,7 +35,6 @@ el
 en-CA
 en-GB
 eo
-es
 es-AR
 es-CL
 es-ES
@@ -59,6 +60,7 @@ hil
 hr
 hsb
 hu
+hus
 hy-AM
 hye
 ia
@@ -77,6 +79,7 @@ kmr
 kn
 ko
 ks
+kw
 lb
 lg
 lij
@@ -106,6 +109,7 @@ pl
 ppl
 pt-BR
 pt-PT
+quc
 quy
 qvi
 rm
@@ -120,6 +124,7 @@ si
 sk
 skr
 sl
+sn
 son
 sq
 sr
@@ -148,7 +153,9 @@ wo
 xcl
 xh
 yo
+yua
 zam
 zgh
 zh-CN
+zh-HK
 zh-TW

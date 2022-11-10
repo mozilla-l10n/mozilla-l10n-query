@@ -67,6 +67,12 @@ def main():
   firefox: project(slug: "firefox") {
     ...allLocales
   }
+  thunderbird: project(slug: "thunderbird") {
+    ...allLocales
+  }
+  seamonkey: project(slug: "seamonkey") {
+    ...allLocales
+  }
   firefox_ios: project(slug: "firefox-for-ios") {
     ...allLocales
   }
@@ -76,7 +82,7 @@ def main():
   android_l10n_fenix: project(slug: "firefox-for-android") {
     ...allLocales
   }
-  android_l10n_lockwise: project(slug: "lockwise-for-android") {
+  android_l10n_focus: project(slug: "focus-for-android") {
     ...allLocales
   }
   vpn_client: project(slug: "mozilla-vpn-client") {
