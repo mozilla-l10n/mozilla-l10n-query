@@ -62,15 +62,14 @@ def main():
         "pontoon-mozorg": [],
     }
 
+    all_locales = []
+
     query = """
 {
   firefox: project(slug: "firefox") {
     ...allLocales
   }
-  thunderbird: project(slug: "thunderbird") {
-    ...allLocales
-  }
-  seamonkey: project(slug: "seamonkey") {
+  comm_l10n: project(slug: "thunderbird") {
     ...allLocales
   }
   firefox_ios: project(slug: "firefox-for-ios") {
@@ -145,6 +144,8 @@ fragment allLocales on Project {
         # Save to file
         for project, locales in output.items():
             locales.sort()
+            # Save list of locales across projects
+            all_locales = locales + all_locales
             saveTextFile(sources_folder, project, locales)
     except Exception as e:
         print(e)
@@ -182,6 +183,12 @@ fragment allLocales on Project {
     gecko_strings_locales.append("en-US")
     gecko_strings_locales.sort()
     saveTextFile(sources_folder, "gecko_strings", gecko_strings_locales)
+
+    # Save list of all locales
+    all_locales.append("en-US")
+    all_locales = list(set(all_locales))
+    all_locales.sort()
+    saveTextFile(sources_folder, "all_projects", all_locales)
 
 
 if __name__ == "__main__":

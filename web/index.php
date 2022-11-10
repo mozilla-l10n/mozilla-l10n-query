@@ -7,8 +7,8 @@ use Json\Json;
 $root_folder = realpath(__DIR__ . '/..');
 require_once "{$root_folder}/vendor/autoload.php";
 
-// Override sources for functional tests both locally and on Travis
-if (getenv('TRAVIS') || getenv('AUTOMATED_TESTS')) {
+// Override sources for functional tests both locally and in automation
+if (getenv('AUTOMATED_TESTS')) {
     $source_path = "{$root_folder}/tests/testfiles/";
 } else {
     $source_path = "{$root_folder}/app/sources/";

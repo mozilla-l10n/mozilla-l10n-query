@@ -23,10 +23,18 @@
         "type": "product",
         "enabled": false
     },
+    "all_projects": {
+        "id": "all_projects",
+        "display_order": 0,
+        "name": "All Projects",
+        "locales": "all_projects.txt",
+        "type": "product",
+        "enabled": true
+    },
     "gecko_strings": {
         "id": "gecko_strings",
         "display_order": 1,
-        "name": "Gecko products",
+        "name": "Firefox",
         "locales": "gecko_strings.txt",
         "type": "product",
         "enabled": true
@@ -34,7 +42,7 @@
     "android_l10n": {
         "id": "android_l10n",
         "display_order": 2,
-        "name": "Android",
+        "name": "Android Projects",
         "locales": "android_l10n.txt",
         "type": "product",
         "enabled": true
@@ -60,6 +68,14 @@
         "display_order": 5,
         "name": "VPN Client",
         "locales": "vpn_client.txt",
+        "type": "product",
+        "enabled": true
+    },
+    "comm_l10n": {
+        "id": "comm_l10n",
+        "display_order": 6,
+        "name": "TB & SM",
+        "locales": "comm_l10n.txt",
         "type": "product",
         "enabled": true
     }
