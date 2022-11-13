@@ -10,6 +10,7 @@ cak
 cs
 cy
 da
+de
 dsb
 el
 en-CA
@@ -35,6 +36,7 @@ ia
 id
 is
 it
+ja
 ka
 kab
 kk

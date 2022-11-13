@@ -38,6 +38,9 @@ if (! file_exists($composer)) {
         $composer,
         file_get_contents('https://getcomposer.org/composer.phar')
     );
+} else {
+    // Update composer
+    exec("php $composer self-update");
 }
 
 if (isset($_SERVER[$header])) {

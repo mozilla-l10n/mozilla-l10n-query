@@ -136,6 +136,10 @@ fragment allLocales on Project {
                 parsed_toml = toml.loads(response.decode("utf-8"))
                 locales += parsed_toml["locales"]
 
+            # For mozilla.org, manually add extra locales not available in Pontoon
+            if project == "comm_l10n":
+                locales += ["de", "ja"]
+
             if project_dest not in output:
                 output[project_dest] = locales
             else:
