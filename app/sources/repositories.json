@@ -23,25 +23,33 @@
         "type": "product",
         "enabled": false
     },
+    "all_projects": {
+        "id": "all_projects",
+        "display_order": 1,
+        "name": "All Projects",
+        "locales": "all_projects.txt",
+        "type": "product",
+        "enabled": true
+    },
     "gecko_strings": {
         "id": "gecko_strings",
-        "display_order": 1,
-        "name": "Gecko products",
+        "display_order": 2,
+        "name": "Firefox",
         "locales": "gecko_strings.txt",
         "type": "product",
         "enabled": true
     },
     "android_l10n": {
         "id": "android_l10n",
-        "display_order": 2,
-        "name": "Android",
+        "display_order": 3,
+        "name": "Android Projects",
         "locales": "android_l10n.txt",
         "type": "product",
         "enabled": true
     },
     "firefox_ios": {
         "id": "firefox_ios",
-        "display_order": 3,
+        "display_order": 4,
         "name": "Firefox for iOS",
         "locales": "firefox_ios.txt",
         "type": "product",
@@ -49,7 +57,7 @@
     },
     "mozilla_org": {
         "id": "mozilla_org",
-        "display_order": 4,
+        "display_order": 5,
         "name": "mozilla.org",
         "locales": "mozilla_org.txt",
         "type": "web",
@@ -57,9 +65,17 @@
     },
     "vpn_client": {
         "id": "vpn_client",
-        "display_order": 5,
+        "display_order": 6,
         "name": "VPN Client",
         "locales": "vpn_client.txt",
+        "type": "product",
+        "enabled": true
+    },
+    "comm_l10n": {
+        "id": "comm_l10n",
+        "display_order": 7,
+        "name": "TB & SM",
+        "locales": "comm_l10n.txt",
         "type": "product",
         "enabled": true
     }

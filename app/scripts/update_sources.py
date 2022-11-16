@@ -62,9 +62,14 @@ def main():
         "pontoon-mozorg": [],
     }
 
+    all_locales = []
+
     query = """
 {
   firefox: project(slug: "firefox") {
+    ...allLocales
+  }
+  comm_l10n: project(slug: "thunderbird") {
     ...allLocales
   }
   firefox_ios: project(slug: "firefox-for-ios") {
@@ -76,7 +81,7 @@ def main():
   android_l10n_fenix: project(slug: "firefox-for-android") {
     ...allLocales
   }
-  android_l10n_lockwise: project(slug: "lockwise-for-android") {
+  android_l10n_focus: project(slug: "focus-for-android") {
     ...allLocales
   }
   vpn_client: project(slug: "mozilla-vpn-client") {
@@ -131,6 +136,10 @@ fragment allLocales on Project {
                 parsed_toml = toml.loads(response.decode("utf-8"))
                 locales += parsed_toml["locales"]
 
+            # For mozilla.org, manually add extra locales not available in Pontoon
+            if project == "comm_l10n":
+                locales += ["de", "ja"]
+
             if project_dest not in output:
                 output[project_dest] = locales
             else:
@@ -139,6 +148,8 @@ fragment allLocales on Project {
         # Save to file
         for project, locales in output.items():
             locales.sort()
+            # Save list of locales across projects
+            all_locales = locales + all_locales
             saveTextFile(sources_folder, project, locales)
     except Exception as e:
         print(e)
@@ -176,6 +187,12 @@ fragment allLocales on Project {
     gecko_strings_locales.append("en-US")
     gecko_strings_locales.sort()
     saveTextFile(sources_folder, "gecko_strings", gecko_strings_locales)
+
+    # Save list of all locales
+    all_locales.append("en-US")
+    all_locales = list(set(all_locales))
+    all_locales.sort()
+    saveTextFile(sources_folder, "all_projects", all_locales)
 
 
 if __name__ == "__main__":
