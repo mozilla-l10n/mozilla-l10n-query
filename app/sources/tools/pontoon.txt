@@ -104,6 +104,7 @@ ny
 oc
 or
 pa-IN
+pa-PK
 pai
 pl
 ppl

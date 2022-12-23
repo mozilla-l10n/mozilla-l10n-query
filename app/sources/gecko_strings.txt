@@ -35,6 +35,7 @@ fa
 ff
 fi
 fr
+fur
 fy-NL
 ga-IE
 gd
