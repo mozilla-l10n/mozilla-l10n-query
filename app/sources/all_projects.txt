@@ -44,6 +44,7 @@ fa
 ff
 fi
 fr
+fur
 fy-NL
 ga-IE
 gd
@@ -95,6 +96,7 @@ ny
 oc
 or
 pa-IN
+pa-PK
 pai
 pl
 ppl
@@ -106,6 +108,7 @@ rm
 ro
 ru
 sat
+sc
 sco
 ses
 si
