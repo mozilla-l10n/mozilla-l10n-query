@@ -714,6 +714,10 @@
       "description": "French",
       "full_name": "fr / French"
     },
+    "fur": {
+      "description": "Friulian",
+      "full_name": "fur / Friulian"
+    },
     "fy-NL": {
       "description": "Frisian",
       "full_name": "fy-NL / Frisian"
@@ -973,6 +977,10 @@
     "sat": {
       "description": "Santali",
       "full_name": "sat / Santali"
+    },
+    "sc": {
+      "description": "Sardinian",
+      "full_name": "sc / Sardinian"
     },
     "sco": {
       "description": "Scots",

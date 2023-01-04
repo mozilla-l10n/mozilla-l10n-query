@@ -89,6 +89,7 @@ scn
 sco
 si
 sk
+skr
 sl
 son
 sq
