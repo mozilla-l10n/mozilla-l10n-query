@@ -47,6 +47,7 @@ it
 ja
 jv
 ka
+kaa
 kab
 kk
 km
