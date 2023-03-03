@@ -468,6 +468,10 @@
       "description": "Telugu",
       "full_name": "te / Telugu"
     },
+    "tg": {
+      "description": "Tajik",
+      "full_name": "tg / Tajik"
+    },
     "th": {
       "description": "Thai",
       "full_name": "th / Thai"
