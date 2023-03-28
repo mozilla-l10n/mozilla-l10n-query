@@ -11,6 +11,7 @@ cs
 cy
 da
 de
+de
 dsb
 el
 en-CA
