@@ -22,6 +22,7 @@ id
 is
 it
 ja
+lo
 nl
 oc
 pa-IN
