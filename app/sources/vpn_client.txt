@@ -27,6 +27,7 @@ lo
 nl
 oc
 pa-IN
+pl
 pt-BR
 pt-PT
 ru
