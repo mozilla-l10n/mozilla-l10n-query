@@ -87,6 +87,7 @@ th
 tl
 tr
 tt
+ug
 uk
 ur
 uz
