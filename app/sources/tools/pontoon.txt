@@ -11,6 +11,7 @@ as
 ast
 ay
 az
+azb
 ban
 be
 bg
