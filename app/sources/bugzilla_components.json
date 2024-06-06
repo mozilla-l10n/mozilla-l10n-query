@@ -428,6 +428,10 @@
       "description": "Slovak",
       "full_name": "sk / Slovak"
     },
+    "skr": {
+      "description": "Saraiki",
+      "full_name": "skr / Saraiki"
+    },
     "sl": {
       "description": "Slovenian",
       "full_name": "sl / Slovenian"
@@ -997,6 +1001,10 @@
     "sk": {
       "description": "Slovak",
       "full_name": "sk / Slovak"
+    },
+    "skr": {
+      "description": "Saraiki",
+      "full_name": "skr / Saraiki"
     },
     "sl": {
       "description": "Slovene",
