@@ -69,7 +69,10 @@ def main():
   firefox: project(slug: "firefox") {
     ...allLocales
   }
-  comm_l10n: project(slug: "thunderbird") {
+  thunderbird: project(slug: "thunderbird") {
+    ...allLocales
+  }
+  seamonkey: project(slug: "seamonkey") {
     ...allLocales
   }
   firefox_ios: project(slug: "firefox-for-ios") {
@@ -136,9 +139,9 @@ fragment allLocales on Project {
                 parsed_toml = toml.loads(response.decode("utf-8"))
                 locales += parsed_toml["locales"]
 
-            # For mozilla.org, manually add extra locales not available in Pontoon
-            if project == "comm_l10n":
-                locales += ["de", "ja"]
+            # Manually add extra locales not available in Pontoon for some projects
+            if project in ["thunderbird", "seamonkey"]:
+                locales.append("ja")
 
             if project_dest not in output:
                 output[project_dest] = locales
