@@ -71,11 +71,19 @@
         "type": "product",
         "enabled": true
     },
-    "comm_l10n": {
-        "id": "comm_l10n",
+    "thunderbird": {
+        "id": "thunderbird",
         "display_order": 7,
-        "name": "TB & SM",
-        "locales": "comm_l10n.txt",
+        "name": "Thunderbird",
+        "locales": "thunderbird.txt",
+        "type": "product",
+        "enabled": true
+    },
+    "seamonkey": {
+        "id": "seamonkey",
+        "display_order": 8,
+        "name": "Seamonkey",
+        "locales": "seamonkey.txt",
         "type": "product",
         "enabled": true
     }
