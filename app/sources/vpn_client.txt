@@ -23,6 +23,7 @@ id
 is
 it
 ja
+ko
 lo
 nl
 oc
