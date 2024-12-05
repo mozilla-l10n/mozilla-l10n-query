@@ -101,6 +101,7 @@ ro
 ru
 sat
 sc
+scn
 si
 sk
 skr

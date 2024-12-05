@@ -111,6 +111,7 @@ ro
 ru
 sat
 sc
+scn
 sco
 ses
 si
