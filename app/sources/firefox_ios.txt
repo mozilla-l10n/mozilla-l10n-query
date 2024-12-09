@@ -75,6 +75,7 @@ rm
 ro
 ru
 sat
+scn
 ses
 si
 sk
