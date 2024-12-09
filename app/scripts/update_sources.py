@@ -155,7 +155,7 @@ fragment allLocales on Project {
             all_locales = locales + all_locales
             saveTextFile(sources_folder, project, locales)
     except Exception as e:
-        print(e)
+        sys.exit(e)
 
     for filename, locales in pontoon_locales.items():
         locales.sort()

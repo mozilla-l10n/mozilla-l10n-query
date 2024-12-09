@@ -40,10 +40,10 @@ def main():
 
         except Exception as e:
             print("Error extracting data from json response")
-            print(e)
+            sys.exit(e)
     except Exception as e:
         print("Error reading json reply from {}".format(json_url))
-        print(e)
+        sys.exit(e)
 
     # Get list of components of the Mozilla Localizations product
     # Unescaped URL: https://bugzilla.mozilla.org/jsonrpc.cgi?method=Product.get&params=[ { 'names': ['Mozilla Localizations'] } ]
@@ -68,10 +68,10 @@ def main():
 
         except Exception as e:
             print("Error extracting data from json response")
-            print(e)
+            sys.exit(e)
     except Exception as e:
         print("Error reading json reply from {}".format(json_url))
-        print(e)
+        sys.exit(e)
 
     # Write list of components name
     cache_file = open(output_filename, "w")
