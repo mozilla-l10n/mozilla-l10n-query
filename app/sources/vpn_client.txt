@@ -36,6 +36,7 @@ sk
 sl
 sq
 sv-SE
+th
 tr
 uk
 vi
