@@ -3,6 +3,7 @@
 
 import json
 import os
+import sys
 import toml
 from urllib.parse import quote as urlquote
 from urllib.request import urlopen
@@ -101,7 +102,7 @@ fragment allLocales on Project {
 }
 """
     try:
-        url = "https://pontoon.mozilla.org/graphql?query={}".format(urlquote(query))
+        url = f"https://pontoon.mozilla.org/graphql?query={urlquote(query)}&raw"
         print("Reading sources for Pontoon")
         response = urlopen(url)
         json_data = json.load(response)
