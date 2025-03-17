@@ -132,6 +132,7 @@ vi
 wo
 yo
 yua
+yue
 zam
 zh-CN
 zh-HK
