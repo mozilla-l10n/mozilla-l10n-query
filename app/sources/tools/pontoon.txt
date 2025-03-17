@@ -157,6 +157,7 @@ xcl
 xh
 yo
 yua
+yue
 zam
 zgh
 zh-CN
