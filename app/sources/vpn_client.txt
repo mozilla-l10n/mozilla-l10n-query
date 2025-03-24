@@ -15,6 +15,7 @@ es-MX
 fa
 fi
 fr
+fur
 fy-NL
 hsb
 hu
