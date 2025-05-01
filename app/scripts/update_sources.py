@@ -23,7 +23,7 @@ def main():
     update_sources = {
         "central": {
             "sources": [
-                "https://hg.mozilla.org/mozilla-central/raw-file/default/browser/locales/all-locales",
+                "https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/browser/locales/all-locales",
             ],
             "filename": "central",
             "format": "txt",
@@ -31,7 +31,7 @@ def main():
         },
         "beta": {
             "sources": [
-                "https://hg.mozilla.org/releases/mozilla-beta/raw-file/default/browser/locales/shipped-locales",
+                "https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/beta/browser/locales/shipped-locales",
             ],
             "filename": "beta",
             "format": "txt",
@@ -39,7 +39,7 @@ def main():
         },
         "release": {
             "sources": [
-                "https://hg.mozilla.org/releases/mozilla-release/raw-file/default/browser/locales/shipped-locales",
+                "https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/release/browser/locales/shipped-locales",
             ],
             "filename": "release",
             "format": "txt",
