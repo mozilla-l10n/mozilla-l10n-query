@@ -33,6 +33,7 @@ pl
 pt-BR
 pt-PT
 ru
+scn
 sk
 sl
 sq
