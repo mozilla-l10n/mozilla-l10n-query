@@ -8,7 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.4', '8.0', '8.1']
+        php-versions:
+          - '8.1'
+          - '8.2'
+          - '8.3'
+          - '8.4'
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -34,7 +38,7 @@ jobs:
         run: composer install --prefer-dist
 
       - name: Run linter (php-cs-fixer)
-        run: vendor/bin/php-cs-fixer --diff --dry-run -v fix
+        run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer --diff --dry-run -v fix
 
       - name: Run tests
         run: |
