@@ -13,7 +13,7 @@
 
     "require-dev": {
         "atoum/atoum" : "~4.2",
-        "friendsofphp/php-cs-fixer": "~3.65"
+        "friendsofphp/php-cs-fixer": "~3.75"
     },
 
     "autoload": {

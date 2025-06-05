@@ -79,6 +79,9 @@ def main():
   firefox_ios: project(slug: "firefox-for-ios") {
     ...allLocales
   }
+  firefox_com: project(slug: "firefoxcom") {
+    ...allLocales
+  }
   mozilla_org: project(slug: "mozillaorg") {
     ...allLocales
   }
@@ -107,7 +110,11 @@ fragment allLocales on Project {
         response = urlopen(url)
         json_data = json.load(response)
         for project, project_data in json_data["data"].items():
-            pontoon_bucket = "pontoon-mozorg" if project == "mozilla_org" else "pontoon"
+            pontoon_bucket = (
+                "pontoon-mozorg"
+                if project in ["firefox_com", "mozilla_org"]
+                else "pontoon"
+            )
             for element in project_data["localizations"]:
                 code = element["locale"]["code"]
                 if code not in pontoon_locales[pontoon_bucket]:
@@ -135,6 +142,11 @@ fragment allLocales on Project {
             Pontoon but in Smartling, available in a TOML file.
             """
             if project == "mozilla_org":
+                url = "https://raw.githubusercontent.com/mozilla-l10n/www-l10n/master/configs/vendor.toml"
+                response = urlopen(url).read()
+                parsed_toml = toml.loads(response.decode("utf-8"))
+                locales += parsed_toml["locales"]
+            if project == "firefox_com":
                 url = "https://raw.githubusercontent.com/mozilla-l10n/www-l10n/master/configs/vendor.toml"
                 response = urlopen(url).read()
                 parsed_toml = toml.loads(response.decode("utf-8"))
