@@ -63,110 +63,85 @@ def main():
         "pontoon-mozorg": [],
     }
 
-    all_locales = []
-
-    query = """
-{
-  firefox: project(slug: "firefox") {
-    ...allLocales
-  }
-  thunderbird: project(slug: "thunderbird") {
-    ...allLocales
-  }
-  seamonkey: project(slug: "seamonkey") {
-    ...allLocales
-  }
-  firefox_ios: project(slug: "firefox-for-ios") {
-    ...allLocales
-  }
-  firefox_com: project(slug: "firefoxcom") {
-    ...allLocales
-  }
-  mozilla_org: project(slug: "mozillaorg") {
-    ...allLocales
-  }
-  android_l10n_fenix: project(slug: "firefox-for-android") {
-    ...allLocales
-  }
-  android_l10n_focus: project(slug: "focus-for-android") {
-    ...allLocales
-  }
-  vpn_client: project(slug: "mozilla-vpn-client") {
-    ...allLocales
-  }
-}
-
-fragment allLocales on Project {
-  localizations {
-    locale {
-      code
+    filename_mapping = {
+        "firefox-for-ios": "firefox_ios",
+        "firefoxcom": "firefox_com",
+        "mozilla-vpn-client": "vpn_client",
+        "mozillaorg": "mozilla_org",
     }
-  }
-}
-"""
+    projects = {
+        "firefox-for-android": [],
+        "firefox-for-ios": [],
+        "firefox": [],
+        "firefoxcom": [],
+        "focus-for-android": [],
+        "mozilla-vpn-client": [],
+        "mozillaorg": [],
+        "seamonkey": [],
+        "thunderbird": [],
+    }
+
+    all_locales = []
     try:
-        url = f"https://pontoon.mozilla.org/graphql?query={urlquote(query)}&raw"
+        url = "https://pontoon.mozilla.org/api/v2/projects/"
         print("Reading sources for Pontoon")
         response = urlopen(url)
         json_data = json.load(response)
-        for project, project_data in json_data["data"].items():
+
+        for project in json_data["results"]:
+            slug = project["slug"]
+            if slug not in projects:
+                continue
+            projects[slug] = project["locales"]
             pontoon_bucket = (
-                "pontoon-mozorg"
-                if project in ["firefox_com", "mozilla_org"]
-                else "pontoon"
+                "pontoon-mozorg" if slug in ["firefoxcom", "mozillaorg"] else "pontoon"
             )
-            for element in project_data["localizations"]:
-                code = element["locale"]["code"]
-                if code not in pontoon_locales[pontoon_bucket]:
-                    pontoon_locales[pontoon_bucket].append(code)
+            pontoon_locales[pontoon_bucket] = list(
+                set(pontoon_locales[pontoon_bucket]) | set(project["locales"])
+            )
 
         # Store locales for projects in Pontoon
-        projects = list(json_data["data"].keys())
         output = {}
-        for project in projects:
-            # Ignore Firefox, since the list is coming from hg
+        for project, project_locales in projects.items():
+            # Ignore Firefox, since the list is coming from the code repository
             if project == "firefox":
                 continue
 
             # Need to group different projects for android-l10n
-            project_dest = (
-                "android_l10n" if project.startswith("android_l10n") else project
-            )
-
-            locales = []
-            for element in json_data["data"][project]["localizations"]:
-                locales.append(element["locale"]["code"])
+            project_dest = "android_l10n" if ("android") in project else project
 
             """
             For mozilla.org, need to take into account locales not enabled in
             Pontoon but in Smartling, available in a TOML file.
             """
-            if project == "mozilla_org":
+            if project == "mozillaorg":
                 url = "https://raw.githubusercontent.com/mozilla-l10n/www-l10n/master/configs/vendor.toml"
                 response = urlopen(url).read()
                 parsed_toml = toml.loads(response.decode("utf-8"))
-                locales += parsed_toml["locales"]
-            if project == "firefox_com":
-                url = "https://raw.githubusercontent.com/mozilla-l10n/www-l10n/master/configs/vendor.toml"
+                project_locales += parsed_toml["locales"]
+            if project == "firefoxcom":
+                url = "https://raw.githubusercontent.com/mozilla-l10n/www-firefox-l10n/master/configs/vendor.toml"
                 response = urlopen(url).read()
                 parsed_toml = toml.loads(response.decode("utf-8"))
-                locales += parsed_toml["locales"]
+                project_locales += parsed_toml["locales"]
 
             # Manually add extra locales not available in Pontoon for some projects
             if project in ["thunderbird", "seamonkey"]:
-                locales.append("ja")
+                project_locales.append("ja")
 
             if project_dest not in output:
-                output[project_dest] = locales
+                output[project_dest] = project_locales
             else:
-                output[project_dest] = list(set(output[project_dest] + locales))
+                output[project_dest] = list(set(output[project_dest] + project_locales))
 
         # Save to file
         for project, locales in output.items():
             locales.sort()
             # Save list of locales across projects
             all_locales = locales + all_locales
-            saveTextFile(sources_folder, project, locales)
+            saveTextFile(
+                sources_folder, filename_mapping.get(project, project), locales
+            )
     except Exception as e:
         sys.exit(e)
 
