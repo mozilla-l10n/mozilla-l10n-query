@@ -5,7 +5,6 @@ import json
 import os
 import sys
 import toml
-from urllib.parse import quote as urlquote
 from urllib.request import urlopen
 
 
@@ -83,7 +82,7 @@ def main():
 
     all_locales = []
     try:
-        url = "https://pontoon.mozilla.org/api/v2/projects/"
+        url = "https://pontoon.mozilla.org/api/v2/projects/?fields=slug,locales&page_size=1000"
         print("Reading sources for Pontoon")
         response = urlopen(url)
         json_data = json.load(response)
