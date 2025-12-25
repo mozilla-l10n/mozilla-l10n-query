@@ -103,6 +103,7 @@ pa-PK
 pai
 pl
 ppl
+ps
 pt-BR
 pt-PT
 quc
