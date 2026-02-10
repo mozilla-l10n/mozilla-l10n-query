@@ -76,6 +76,7 @@ kw
 lij
 lo
 lt
+lv
 meh
 mix
 ml
