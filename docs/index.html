@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mozilla-l10n-query</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            if (params.has('html')) return;
+            var types = ['repo', 'type', 'bugzilla', 'tool'];
+            for (var i = 0; i < types.length; i++) {
+                var qt = types[i];
+                if (params.has(qt)) {
+                    var val = params.get(qt);
+                    if (val) {
+                        window.location.replace('api/' + qt + '/' + val + '.json');
+                    }
+                    return;
+                }
+            }
+        })();
+    </script>
 </head>
 <body>
     <header>
