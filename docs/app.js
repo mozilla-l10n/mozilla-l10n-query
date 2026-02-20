@@ -57,13 +57,22 @@ function getQueryFromLocation() {
 
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
+        const { queryType, value } = getQueryFromLocation();
+        const searchParams = new URLSearchParams(window.location.search);
+        const htmlMode = searchParams.has('html');
+
+        // Params present without &html → redirect to raw JSON
+        if (queryType && !htmlMode) {
+            window.location.replace(buildApiUrl(queryType, value));
+            return;
+        }
+
         const form = document.getElementById('query-form');
         const queryTypeEl = document.getElementById('query-type');
         const queryValueEl = document.getElementById('query-value');
 
-        // Load from URL params on page load
-        const { queryType, value } = getQueryFromLocation();
-        if (queryType) {
+        // Load from URL params on page load (only in &html mode)
+        if (queryType && htmlMode) {
             queryTypeEl.value = queryType;
             queryValueEl.value = value;
             fetchAndDisplay(buildApiUrl(queryType, value));
@@ -77,6 +86,7 @@ if (typeof document !== 'undefined') {
             const params = new URLSearchParams();
             if (qt && v) {
                 params.set(qt, v);
+                params.set('html', '');
             }
             history.replaceState(
                 null,
