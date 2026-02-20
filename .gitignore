@@ -1,7 +1,10 @@
+__pycache__/
 .composer_cache
 .php-cs-fixer.cache
+*.pyc
 app/config/config.yml
 composer.lock
 composer.phar
+docs/api/
 vendor
 web/github_log.txt

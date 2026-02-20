@@ -4,6 +4,23 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Run Python generator tests
+        run: python -m unittest discover tests/static/ -p "test_generate.py"
+
+      - name: Run JS UI tests
+        run: node tests/static/test_app.js
+
   run:
     runs-on: ubuntu-latest
     strategy:

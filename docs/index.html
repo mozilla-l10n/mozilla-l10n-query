@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mozilla-l10n-query</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>mozilla-l10n-query</h1>
+        <p>Query localization data for Mozilla projects.</p>
+    </header>
+
+    <main>
+        <section class="query-section">
+            <h2>Query</h2>
+            <form id="query-form">
+                <div class="form-group">
+                    <label for="query-type">Query type</label>
+                    <select id="query-type">
+                        <option value="">All repositories</option>
+                        <option value="repo">Repository (repo=…)</option>
+                        <option value="type">Type (type=…)</option>
+                        <option value="bugzilla">Bugzilla (bugzilla=…)</option>
+                        <option value="tool">Tool (tool=…)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="query-value">Value</label>
+                    <input id="query-value" type="text"
+                           placeholder="e.g. beta, product, www, pontoon" />
+                </div>
+                <button type="submit">Query</button>
+            </form>
+            <pre id="results"></pre>
+        </section>
+
+        <section class="endpoints-section">
+            <h2>Pre-generated endpoints</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="api/index.json">api/index.json</a></td>
+                        <td>All repositories</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/release.json">api/repo/release.json</a></td>
+                        <td>Release repository</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/beta.json">api/repo/beta.json</a></td>
+                        <td>Beta repository</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/central.json">api/repo/central.json</a></td>
+                        <td>Central repository</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/gecko_strings.json">api/repo/gecko_strings.json</a></td>
+                        <td>Firefox (gecko-strings)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/all_projects.json">api/repo/all_projects.json</a></td>
+                        <td>All projects</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/android_l10n.json">api/repo/android_l10n.json</a></td>
+                        <td>Android projects</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/firefox_ios.json">api/repo/firefox_ios.json</a></td>
+                        <td>Firefox for iOS</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/mozilla_org.json">api/repo/mozilla_org.json</a></td>
+                        <td>mozilla.org</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/firefox_com.json">api/repo/firefox_com.json</a></td>
+                        <td>firefox.com</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/vpn_client.json">api/repo/vpn_client.json</a></td>
+                        <td>VPN Client</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/thunderbird.json">api/repo/thunderbird.json</a></td>
+                        <td>Thunderbird</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/repo/seamonkey.json">api/repo/seamonkey.json</a></td>
+                        <td>Seamonkey</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/type/product.json">api/type/product.json</a></td>
+                        <td>Product repositories</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/type/web.json">api/type/web.json</a></td>
+                        <td>Web repositories</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/bugzilla/www.json">api/bugzilla/www.json</a></td>
+                        <td>Bugzilla www.mozilla.org locales</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/bugzilla/product.json">api/bugzilla/product.json</a></td>
+                        <td>Bugzilla Mozilla Localizations</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/tool/pontoon.json">api/tool/pontoon.json</a></td>
+                        <td>Pontoon locales</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/tool/pontoon-mozorg.json">api/tool/pontoon-mozorg.json</a></td>
+                        <td>Pontoon mozilla.org locales</td>
+                    </tr>
+                    <tr>
+                        <td><a href="api/tool/all.json">api/tool/all.json</a></td>
+                        <td>All tools</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
