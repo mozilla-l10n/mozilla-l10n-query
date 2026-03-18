@@ -106,6 +106,7 @@ nn-NO
 nv
 ny
 oc
+om
 or
 pa-IN
 pa-PK
