@@ -12,6 +12,7 @@ az
 azb
 ban
 be
+bew
 bg
 bn
 bo
