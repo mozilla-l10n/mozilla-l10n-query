@@ -81,6 +81,7 @@ si
 sk
 sl
 sq
+sr
 su
 sv-SE
 ta
