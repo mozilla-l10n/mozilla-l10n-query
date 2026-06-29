@@ -22,7 +22,7 @@ class Tools extends atoum\test
         $this
             ->array($obj->getLocales('all'))
                 ->isEqualTo([
-                        'pontoon-mozorg' => [],
+                        'pontoon-mozorg' => ['ca', 'de'],
                         'pontoon'        => ['ast', 'bg', 'bn-IN'],
                     ]);
     }
