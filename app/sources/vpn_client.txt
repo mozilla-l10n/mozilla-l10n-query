@@ -26,7 +26,9 @@ it
 ja
 ko
 lo
+nb-NO
 nl
+nn-NO
 oc
 pa-IN
 pl
