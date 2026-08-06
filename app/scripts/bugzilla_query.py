@@ -26,13 +26,12 @@ def main():
     json_components = nested_dict()
 
     # Get list of locales for field cf_locale, used for example on www.mozilla.org
-    # Unescaped URL: https://bugzilla.mozilla.org/jsonrpc.cgi?method=Bug.fields&params=[ { 'names': ['cf_locale'] } ]
-    json_url = "https://bugzilla.mozilla.org/jsonrpc.cgi?method=Bug.fields&params=%5B%20{%20%22names%22:%20%5B%22cf_locale%22%5D%20}%20%5D"
+    json_url = "https://bugzilla.mozilla.org/rest/field/bug/cf_locale"
     try:
         response = urlopen(json_url)
         json_data = json.load(response)
         try:
-            for component in json_data["result"]["fields"][0]["values"]:
+            for component in json_data["fields"][0]["values"]:
                 locale = component["name"].partition("/")[0].strip()
                 json_components["cf_locale"][locale] = {
                     "full_name": component["name"],
@@ -47,13 +46,12 @@ def main():
         sys.exit(e)
 
     # Get list of components of the Mozilla Localizations product
-    # Unescaped URL: https://bugzilla.mozilla.org/jsonrpc.cgi?method=Product.get&params=[ { 'names': ['Mozilla Localizations'] } ]
-    json_url = "https://bugzilla.mozilla.org/jsonrpc.cgi?method=Product.get&params=[%20{%20%22names%22:%20[%22Mozilla%20Localizations%22]%20}%20]"
+    json_url = "https://bugzilla.mozilla.org/rest/product?names=Mozilla%20Localizations"
     try:
         response = urlopen(json_url)
         json_data = json.load(response)
         try:
-            for component in json_data["result"]["products"][0]["components"]:
+            for component in json_data["products"][0]["components"]:
                 locale = component["name"].partition("/")[0].strip()
                 excluded_components = [
                     "Documentation",
