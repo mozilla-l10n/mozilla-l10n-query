@@ -16,11 +16,13 @@ dsb
 el
 en-CA
 en-GB
+eo
 es-AR
 es-ES
 es-MX
 et
 eu
+fa
 fi
 fr
 fy-NL
